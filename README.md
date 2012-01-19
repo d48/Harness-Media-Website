@@ -7,5 +7,5 @@ Website for Harness Media Group
 ### 0.1 Todo List
 
 * establish full base page template
-* content container
+* ~~content container~~
 * footer layout
