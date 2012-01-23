@@ -14,7 +14,7 @@ header { position: relative; z-index: 20;}
 /* Navigation
 *************************************************************/
 nav { margin-top: 120px; }
-nav li { display: inline; font-family: Arial, Helvetica; font-size: 19px; margin: 0 30px 0 0;}
+nav li { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0;}
 nav li a { color: #000; text-decoration: none;}
 nav li a:hover, nav li a.selected { color: #ed217c; }
 
@@ -51,6 +51,10 @@ nav li a:hover, nav li a.selected { color: #ed217c; }
   border-radius: 10px;
 	background-color: #fff; min-height: 240px;
 }
+#blog-entries h1 { color: #ed217c; font-size: 24px; font-weight: bold; line-height: 24px; margin:0;}
+#blog-entries h2 { font-size: 24px; line-height:24px; margin:0; }
+#blog-entries li { font-size: 18px; }
+#blog-entries li a:hover { color: #ed217c; }
 .one-third.column { width: 328px !important; }
 
 /* ==|== non-semantic helper classes ======================================== */
