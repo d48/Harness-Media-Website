@@ -29,8 +29,8 @@ nav li a:hover, nav li a.selected { color: #ed217c; }
   border-radius: 10px;
   display: block;
   min-height: 400px;
-  position: absolute;
-  top: 160px;
+  position: relative;
+  top: -33px;
   width: 100%;
   z-index: 10px;
 }
@@ -42,7 +42,16 @@ nav li a:hover, nav li a.selected { color: #ed217c; }
 .get-a-quote { float: right; margin: 0 22px 22px 0; }
 
 
-
+/* Footer 
+*************************************************************/
+#footer { display: block; position: relative; top: -15px; }
+#blog-entries,#facebook-module,#email-signup { 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+	background-color: #fff; min-height: 240px;
+}
+.one-third.column { width: 328px !important; }
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
