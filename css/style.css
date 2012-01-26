@@ -8,6 +8,13 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 *************************************************************/
 header { position: relative; z-index: 20;}
 #logo { margin-top: 10px; }
+#logo.sprite {
+	background: url('../img/sprite.png') no-repeat -1px -1px;
+	width: 166px;
+	height: 180px;
+	text-indent: -9999px;
+}
+#logo.sprite a { display: block; height: 180px; width: 166px;}
 #learnmore { margin-top: 100px; }
 
 
@@ -30,7 +37,7 @@ nav li a:hover, nav li a.selected { color: #ed217c; }
   display: block;
   min-height: 400px;
   position: relative;
-  top: -33px;
+  top: -31px;
   width: 100%;
   z-index: 10px;
 }
@@ -49,11 +56,28 @@ nav li a:hover, nav li a.selected { color: #ed217c; }
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-	background-color: #fff; min-height: 240px;
+	background-color: #fff;
+	min-height: 270px;
 }
-#blog-entries h1 { color: #ed217c; font-size: 24px; font-weight: bold; line-height: 24px; margin:0;}
+#blog-entries ul { margin-bottom: 15px; }
+#facebook-module {
+}
+#facebook-module div { margin: 5px; }
+#blog-entries hgroup { padding: 10px 15px 0; }
+#blog-entries h1 { color: #ed217c; font-size: 24px; font-weight: bold; line-height: 24px; margin: 0 0 -8px 0;}
 #blog-entries h2 { font-size: 24px; line-height:24px; margin:0; }
-#blog-entries li { font-size: 18px; }
+#blog-entries li { 
+	background: url(../img/arrow.png) no-repeat center right;
+	border-bottom: 1px dashed #d4d4d4;
+	font-size: 18px; 
+	margin: 0 15px;
+	padding: 8px 0;
+}
+#blog-entries li a span { 
+	float: right;
+	width: 9px;
+	height: 9px;
+}
 #blog-entries li a:hover { color: #ed217c; }
 .one-third.column { width: 328px !important; }
 
