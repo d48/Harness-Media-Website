@@ -8,4 +8,5 @@ Website for Harness Media Group
 
 * establish full base page template
 * ~~content container~~
-* footer layout
+* ~~footer layout~~
+* footer bottom layout

@@ -93,18 +93,38 @@
 						<li><a href="#">Landing Pages 2</a></li>
 				</ul>
 			</section>
-    	<section id="facebook-module" class="one-third column"><div class="fb-like-box" data-href="https://www.facebook.com/pages/Rossi-Valentino/50801001459" data-width="292" data-height="226" data-show-faces="true" data-border-color="white" data-stream="true" data-header="false"></div></section>
+    	<section id="facebook-module" class="one-third column">
+				<div class="fb-like-box" data-href="https://www.facebook.com/pages/Rossi-Valentino/50801001459" data-width="310" 
+				data-height="250" data-show-faces="true" data-border-color="white" data-stream="true" data-header="false"></div>
+			</section>
     	<section id="email-signup" class="one-third column omega">
+
 				<form id="form-newsletter" method="post">
-				<label>Email</label>
-				<input type="text" name="email" />
-				<label>First Name</label>
-				<input type="text" name="firstname" />
-				<label>Gender</label>
-				<input type="radio" name="gender" value="male" />
-				<input type="radio" name="gender" value="female" />
-				<input type="button" name="submit" value="Submit" />
+					<fieldset id="email-set">
+						<label>Email</label>
+						<input type="text" name="email" />
+					</fieldset>
+
+					<fieldset id="name-set">
+						<label>First Name</label>
+						<input type="text" name="firstname" />
+					</fieldset>
+
+					<fieldset id="gender-set">
+						<label for="">Gender</label>
+							<div class="radio-container">
+								<label for="male-radio"><input type="radio" name="gender" id="male-radio" value="male" /> 
+									<span>Male</span>
+								</label>
+								<label for="female-radio"><input type="radio" name="gender" id="female-radio" value="female" /> 
+									<span>Female</span>
+								</label>
+							</div>
+					</fieldset>
+					<button type="submit" id="button-submit">Submit!</button>
+
 				</form>
+
 			</section>
     </footer>
   </div> <!--! end of #container -->
@@ -131,7 +151,7 @@
   <script src="js/libs/cufon-yui.js" type="text/javascript"></script>
   <script src="js/libs/Avenir_400-Avenir_900.font.js" type="text/javascript"></script>
   <script type="text/javascript">		
-    Cufon.replace('nav li,#blog-entries h1,#blog-entries h2,#blog-entries li', {hover: true});
+    Cufon.replace('nav li,#blog-entries h1,#blog-entries h2,#blog-entries li,button,#button-submit', {hover: true});
   </script>
   <script type="text/javascript"> Cufon.now(); </script>
     
