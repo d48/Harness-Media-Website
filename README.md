@@ -6,7 +6,12 @@ Website for Harness Media Group
 
 ### 0.1 Todo List
 
-* establish full base page template
+* ~~establish full base page template~~
 * ~~content container~~
 * ~~footer layout~~
-* footer bottom layout
+* ~~footer bottom layout~~
+
+### 0.2 Todo List
+
+* homepage content layout
+* slider programming
