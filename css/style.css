@@ -20,10 +20,10 @@ header { position: relative; z-index: 20;}
 
 /* Navigation
 *************************************************************/
-nav { margin-top: 120px; }
-nav li { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0;}
-nav li a { color: #000; text-decoration: none;}
-nav li a:hover, nav li a.selected { color: #ed217c; }
+#nav-primary { margin-top: 120px; }
+#nav-primary li { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0;}
+#nav-primary li a { color: #000; text-decoration: none;}
+#nav-primary li a:hover, #nav-primary li a.selected { color: #ed217c; }
 
 .cufon-loading nav li { visibility: hidden !important; }
 
@@ -104,6 +104,16 @@ input[type="radio"] {
 	outline: 0;
 	width: 14px; 
 }
+
+#copyright { font-size: 12px; font-style: italic; padding: 10px; }
+#detail { border-bottom: 1px dashed #d4d4d4; color: #666; font-size: 12px; padding: 10px; }
+#footer-logo { background: url('../img/sprite.png') no-repeat -1px -438px; width: 105px; height: 108px; }
+
+#nav-secondary { padding-top: 10px; }
+#nav-secondary li { margin-bottom: 0; } 
+#nav-secondary li a { font-size: 12px; margin: 0; padding: 0; text-decoration: none; }
+
+
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
