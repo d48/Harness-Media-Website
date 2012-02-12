@@ -13,5 +13,6 @@ Website for Harness Media Group
 
 ### 0.2 Todo List
 
+* ~~Mobile/Tablet templat styling~~
 * homepage content layout
 * slider programming
