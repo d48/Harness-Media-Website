@@ -1,5 +1,18 @@
+ 
+/* Table of Contents
+==================================================
+    #Primary styles
+    #Header
+		#Navigation
+		#Content
+		#Buttons
+		#Footer
+    #Non-semantic helper classes
+		#Media-Queries	
+		*/
 
-/* ==|== primary styles ===================================================== */
+
+/* ==|== Primary styles ===================================================== */
 
 body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 
@@ -130,10 +143,31 @@ input[type="radio"] {
 
 /* ==|== media queries ====================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
 
+	/* Primary Nav */
+  #nav-primary { margin-left: 20px; margin-top: 30px; }
+	#nav-primary li { display:block; margin: 0 0 5px 0; }
+
+
+	/* Content */
+	#learnmore { display: none; }
+	#main { margin-bottom: 20px; top: -20px; }
+	.get-a-quote { margin: 0 0 20px 0; text-align: center; }
+	.get-a-quote img { width: 85%; }
+
+
+	/* Footer */
+	#blog-entries { display: none; }
+	#facebook-module { display:none; }
+	#email-signup { background-position: -12px 0; width: 100% !important; }
+	#email-set input, #name-set input { width: 60% !important; }
+	#gender-set .radio-container { margin-bottom: 10px; margin-left: 20px; }
+
+	#nav-secondary { display: none; }
 
 }
+
 
 @media only screen and (min-width: 768px) {
 
