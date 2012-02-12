@@ -143,6 +143,21 @@ input[type="radio"] {
 
 /* ==|== media queries ====================================================== */
 
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	/* Primary Nav */
+	#nav-primary li { margin: 0 20px 0 0; }
+	#learnmore { bottom: 100px; position: absolute; right: 80px; }
+
+	/* Footer */
+	#blog-entries, #email-signup { width: 374px !important; }
+	#email-signup input[type="text"] { width: 245px; }
+	#facebook-module { display: none; }
+	#description { width: 480px; }
+
+}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 
@@ -171,9 +186,9 @@ input[type="radio"] {
 
 }
 
+@media only screen and (max-width: 479px) { 
 
-
-@media only screen and (max-width: 480px) { 
+  div { overflow: hidden; }
 
 	/* Primary Nav */
   #nav-primary { margin-left: 20px; margin-top: 30px; }
@@ -196,11 +211,6 @@ input[type="radio"] {
 
 	#nav-secondary { display: none; }
 
-
-}
-
-
-@media only screen and (min-width: 768px) {
 
 }
 
