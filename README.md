@@ -1,6 +1,8 @@
 # Introduction
 
-Website for Harness Media Group
+Website for Harness Media Group. 
+
+Preview work in progress on github here: http://design48.github.com/Harness-Media-Website/
 
 ## Road Map
 
@@ -10,6 +12,7 @@ Website for Harness Media Group
 * ~~content container~~
 * ~~footer layout~~
 * ~~footer bottom layout~~
+* ~~responsive website - try resizing browser~~
 
 ### 0.2 Todo List
 
