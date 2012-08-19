@@ -19,6 +19,11 @@ Preview work in progress on github here: http://design48.github.com/Harness-Medi
 * ~~Mobile/Tablet templat styling~~
 * ~~persistent nav javascript~~
 * ~~css for persitent nav~~
-* cross-browser persistent nav responsive styling
+* ~~cross-browser persistent nav responsive styling~~
 * homepage content layout
 * slider programming
+
+### 0.3 Todo List
+
+* mvc setup for all pages
+* portfolio layout and content
