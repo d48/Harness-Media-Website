@@ -17,5 +17,6 @@ Preview work in progress on github here: http://design48.github.com/Harness-Medi
 ### 0.2 Todo List
 
 * ~~Mobile/Tablet templat styling~~
+* ~~persistent nav javascript~~
 * homepage content layout
 * slider programming
