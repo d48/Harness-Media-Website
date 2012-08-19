@@ -13,7 +13,7 @@
 
 
 /* ==|== Primary styles ===================================================== */
-
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 
 
@@ -30,7 +30,7 @@ header { position: relative; z-index: 20;}
 #logo.sprite a { display: block; height: 180px; width: 166px;}
 #learnmore { 
   float: right;
-  margin: 100px -6px 14px 0;
+  margin: 100px -4px 14px 0;
   width: auto;
 }
 
@@ -46,7 +46,7 @@ header { position: relative; z-index: 20;}
 
 /* Nav persistent
  ******************************/
-.fixed header{
+.fixed #header{
   background-color: #f6f6f6;
   height: 68px;
 
@@ -66,16 +66,16 @@ header { position: relative; z-index: 20;}
   top: -10px;
   width: 1024px !important;
 }
-.fixed header #nav-primary { 
+.fixed #header #nav-primary { 
   margin: 30px 50px 0 43px;
 }
-.fixed.open header {
+.fixed.open #header {
   height: 228px;
 }
-.fixed header #learnmore{
+.fixed #header #learnmore{
   margin: 14px 5px;
 }
-.fixed header #logo.sprite{ 
+.fixed #header #logo.sprite{ 
   background-position: -3px -564px;
   margin: 15px 0 0 10px;
   height: 46px;
@@ -194,7 +194,7 @@ input[type="radio"] {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
 	/* Primary Nav */
-  .fixed header { width: 768px !important; }
+  .fixed #header { width: 768px !important; }
 	#nav-primary li { margin: 0 20px 0 0; }
 	#learnmore { bottom: 100px; position: absolute; right: 80px; }
 
@@ -210,9 +210,9 @@ input[type="radio"] {
 
 
 	/* Primary Nav */
-  .fixed header { margin-left: 0 !important; width: 420px !important; }
-  .fixed header #nav-primary { display: none; margin-left: 113px !important; }
-  .fixed header #nav-menu-button { display: block; margin: 30px 0 0 113px; }
+  .fixed #header { margin-left: 0 !important; width: 420px !important; }
+  .fixed #header #nav-primary { display: none; margin-left: 113px !important; }
+  .fixed #header #nav-menu-button { display: block; margin: 30px 0 0 113px; }
   #nav-primary { margin-left: 70px; margin-top: 30px; }
 	#nav-primary li { display:block; margin: 0 0 5px 0; }
 
@@ -242,9 +242,9 @@ input[type="radio"] {
   div { overflow: hidden; }
 
 	/* Primary Nav */
-  .fixed header { margin-left: 0 !important; width: 300px !important; }
-  .fixed header #nav-primary { display: none; margin: 30px 0 0 60px !important; }
-  .fixed header #nav-menu-button { display: block; margin: 30px 0 0 60px !important; }
+  .fixed #header { margin-left: 0 !important; width: 300px !important; }
+  .fixed #header #nav-primary { display: none; margin: 30px 0 0 60px !important; }
+  .fixed #header #nav-menu-button { display: block; margin: 30px 0 0 60px !important; }
   #nav-primary { margin-left: 20px; margin-top: 30px; }
 	#nav-primary li { display:block; margin: 0 0 5px 0; }
 
