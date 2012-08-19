@@ -28,19 +28,25 @@ header { position: relative; z-index: 20;}
 	text-indent: -9999px;
 }
 #logo.sprite a { display: block; height: 180px; width: 166px;}
-#learnmore { margin-top: 100px; }
+#learnmore { 
+  float: right;
+  margin: 100px -6px 14px 0;
+  width: auto;
+}
 
 
 /* Navigation
 *************************************************************/
-#nav-primary { margin-top: 120px; }
-#nav-primary li { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0; text-transform: uppercase;}
+#nav-primary { margin-top: 116px; }
+#nav-primary li, #nav-menu-button { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0; text-transform: uppercase;}
 #nav-primary li a { color: #000; text-decoration: none;}
 #nav-primary li a:hover, #nav-primary li a.selected { color: #ed217c; }
+#nav-menu-button { display:none; }
+#nav-menu-button a:hover { color: #ed217c; }
 
 /* Nav persistent
  ******************************/
-.fixed {
+.fixed header{
   background-color: #f6f6f6;
   height: 68px;
 
@@ -60,20 +66,23 @@ header { position: relative; z-index: 20;}
   top: -10px;
   width: 1024px !important;
 }
-.fixed #nav-primary { 
-  margin: 30px 50px 0 50px;
+.fixed header #nav-primary { 
+  margin: 30px 50px 0 43px;
 }
-.fixed #learnmore{
-  float: right;
+.fixed.open header {
+  height: 228px;
+}
+.fixed header #learnmore{
   margin: 14px 5px;
-  width: auto;
 }
-.fixed #logo.sprite{ 
+.fixed header #logo.sprite{ 
   background-position: -3px -564px;
   margin: 15px 0 0 10px;
   height: 46px;
   width: 112px;
 }
+.fixed #main { top:55px; }
+.fixed #footer { top:70px; }
 
 
 .cufon-loading nav li { visibility: hidden !important; }
@@ -185,6 +194,7 @@ input[type="radio"] {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
 	/* Primary Nav */
+  .fixed header { width: 768px !important; }
 	#nav-primary li { margin: 0 20px 0 0; }
 	#learnmore { bottom: 100px; position: absolute; right: 80px; }
 
@@ -200,6 +210,9 @@ input[type="radio"] {
 
 
 	/* Primary Nav */
+  .fixed header { margin-left: 0 !important; width: 420px !important; }
+  .fixed header #nav-primary { display: none; margin-left: 113px !important; }
+  .fixed header #nav-menu-button { display: block; margin: 30px 0 0 113px; }
   #nav-primary { margin-left: 70px; margin-top: 30px; }
 	#nav-primary li { display:block; margin: 0 0 5px 0; }
 
@@ -229,6 +242,9 @@ input[type="radio"] {
   div { overflow: hidden; }
 
 	/* Primary Nav */
+  .fixed header { margin-left: 0 !important; width: 300px !important; }
+  .fixed header #nav-primary { display: none; margin: 30px 0 0 60px !important; }
+  .fixed header #nav-menu-button { display: block; margin: 30px 0 0 60px !important; }
   #nav-primary { margin-left: 20px; margin-top: 30px; }
 	#nav-primary li { display:block; margin: 0 0 5px 0; }
 
