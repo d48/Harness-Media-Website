@@ -20,6 +20,7 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 /* Header
 *************************************************************/
 header { position: relative; z-index: 20;}
+#header { margin-left: 0; }
 #logo { margin-top: 10px; }
 #logo.sprite {
 	background: url('../img/sprite.png') no-repeat -1px -1px;
@@ -190,24 +191,45 @@ input[type="radio"] {
 
 /* ==|== media queries ====================================================== */
 
+ /* media Queries
+  *
+  * FOLDING FLUID GRID
+  * < 767px     - 1-Column Fluid Grid
+  * 768px - 1023px  - 2-Column Fluid Grid
+  * > 1024px      - 3-Column Fluid Grid
+  * Change widths as necessary
+  * ------------------------------------------- */
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-
+/* MOBILE PORTRAIT */
+@media only screen and (min-width: 320px) {
 	/* Primary Nav */
-  .fixed #header { width: 768px !important; }
-	#nav-primary li { margin: 0 20px 0 0; }
-	#learnmore { bottom: 100px; position: absolute; right: 80px; }
+  .fixed #header { margin-left: 0 !important; width: 300px !important; }
+  .fixed #header #nav-primary { display: none; margin: 30px 0 0 60px !important; }
+  .fixed #header #nav-menu-button { display: block; margin: 30px 0 0 60px !important; }
+  #nav-primary { margin-left: 20px; margin-top: 30px; }
+	#nav-primary li { display:block; margin: 0 0 5px 0; }
+
+	/* Content */
+	#learnmore { display: none; }
+	#main { margin-bottom: 20px; top: -20px; }
+	.get-a-quote { margin: 0 0 20px 0; text-align: center; }
+	.get-a-quote img { width: 85%; }
+
 
 	/* Footer */
-	#blog-entries, #email-signup { width: 374px !important; }
-	#email-signup input[type="text"] { width: 245px; }
-	#facebook-module { display: none; }
-	#description { width: 480px; }
+	#blog-entries { display: none; }
+	#facebook-module { display:none; }
+	#email-signup { background-position: -12px 0; width: 100% !important; }
+	#email-set input, #name-set input { width: 60% !important; }
+	#gender-set .radio-container { margin-bottom: 10px; margin-left: 20px; }
+
+	#nav-secondary { display: none; }
+
 
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
+/* MOBILE LANDSCAPE */
+@media only screen and (min-width: 480px) {
 
 	/* Primary Nav */
   .fixed #header { margin-left: 0 !important; width: 420px !important; }
@@ -237,36 +259,49 @@ input[type="radio"] {
 
 }
 
-@media only screen and (max-width: 479px) { 
+/* SMALL TABLET */
+@media only screen and (min-width: 600px) {
+}
 
-  div { overflow: hidden; }
+/* TABLET/NETBOOK */
+@media only screen and (min-width: 768px) { 
+
+}
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) { 
+}
+
+@media only screen and (min-width: 1280px) { 
+  /* DESKTOP */
+}
+
+/* WIDESCREEN */
+/* Increased body size for legibility */
+@media only screen and (min-width: 1400px) { 
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
 
 	/* Primary Nav */
-  .fixed #header { margin-left: 0 !important; width: 300px !important; }
-  .fixed #header #nav-primary { display: none; margin: 30px 0 0 60px !important; }
-  .fixed #header #nav-menu-button { display: block; margin: 30px 0 0 60px !important; }
-  #nav-primary { margin-left: 20px; margin-top: 30px; }
-	#nav-primary li { display:block; margin: 0 0 5px 0; }
-
-
-	/* Content */
-	#learnmore { display: none; }
-	#main { margin-bottom: 20px; top: -20px; }
-	.get-a-quote { margin: 0 0 20px 0; text-align: center; }
-	.get-a-quote img { width: 85%; }
-
+  .fixed #header { width: 768px !important; }
+	#nav-primary li { margin: 0 20px 0 0; }
+	#learnmore { bottom: 100px; position: absolute; right: 80px; }
 
 	/* Footer */
-	#blog-entries { display: none; }
-	#facebook-module { display:none; }
-	#email-signup { background-position: -12px 0; width: 100% !important; }
-	#email-set input, #name-set input { width: 60% !important; }
-	#gender-set .radio-container { margin-bottom: 10px; margin-left: 20px; }
+	#blog-entries, #email-signup { width: 374px !important; }
+	#email-signup input[type="text"] { width: 245px; }
+	#facebook-module { display: none; }
+	#description { width: 480px; }
 
-	#nav-secondary { display: none; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
 
 
 }
+
 
 
 
