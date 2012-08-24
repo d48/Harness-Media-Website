@@ -1,0 +1,63 @@
+<?=$this->doctype();?>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+                <head>
+
+                    <!-- Basic Page Needs
+                    ================================================== -->
+                    <?= $this->headMeta(); ?>
+                    <?= $this->headTitle(); ?>
+
+                    <!-- Mobile Specific Metas
+                    ================================================== -->
+
+                    <!-- CSS concatenated and minified via ant build script
+                    ================================================== -->
+                    <?= $this->headLink(); ?>
+                    <?= $this->headScript(); ?>
+
+
+                    <!-- Favicons
+                    ================================================== -->
+                    <link rel="shortcut icon" href="images/favicon.ico">
+                    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+                    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+                    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+                </head>
+
+                <body class="default">
+
+                    <!-- Primary Page Layout
+                    ================================================== -->
+                    
+                    <div id="container" class="container">
+                    <?= $this->render('_header.phtml'); ?>
+
+                        <div id="main" role="main" class="seventeen columns">
+
+                            <?= $this->placeholder('Zend_View_Helper_HeadTitle'); ?>
+
+                            <div class="page-title">
+                                <img src="img/title-about.png" />
+                            </div>
+
+                            <?= $this->layout()->content; ?>
+
+                            <a href="/connect/get-a-quote.php" class="get-a-quote"><img src="img/button-get-a-quote.jpg" /></a>
+
+                        </div> <!-- #main -->
+
+                        <?= $this->render('_footer.phtml'); ?>
+
+                    </div> <!-- #container -->
+
+                    <?= $this->render('_footer-scripts.phtml'); ?>
+
+                    <!-- End Document
+                    ================================================== -->  
+
+                    </body>
+                </html>
