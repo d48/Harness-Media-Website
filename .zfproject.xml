@@ -16,6 +16,18 @@
         <controllerFile controllerName="Work">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Play">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Serve">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Connect">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="About">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
@@ -33,6 +45,18 @@
             <viewScriptFile forActionName="about"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Work">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Play">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Serve">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Connect">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="About">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
