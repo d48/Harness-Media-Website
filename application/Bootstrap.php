@@ -4,6 +4,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
     public $frontController;
 
+    protected function _initLocale() 
+    {
+        $locale = new Zend_Locale('en_US');
+        Zend_Registry::set('Zend_Locale', $locale);
+    }
+
     protected function _initViewSettings()
     {
         $this->bootstrap('view');
