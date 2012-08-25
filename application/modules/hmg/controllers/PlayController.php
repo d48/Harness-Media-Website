@@ -1,6 +1,6 @@
 <?php
 
-class PlayController extends Zend_Controller_Action
+class HMG_PlayController extends Zend_Controller_Action
 {
 
     public function init()

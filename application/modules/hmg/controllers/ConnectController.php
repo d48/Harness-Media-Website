@@ -1,6 +1,6 @@
 <?php
 
-class ConnectController extends Zend_Controller_Action
+class HMG_ConnectController extends Zend_Controller_Action
 {
 
     public function init()

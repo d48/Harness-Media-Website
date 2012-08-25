@@ -1,6 +1,6 @@
 <?php
 
-class ServeController extends Zend_Controller_Action
+class HMG_ServeController extends Zend_Controller_Action
 {
 
     public function init()
