@@ -1,4 +1,10 @@
-<?=$this->doctype();?>
+<?php 
+echo $this->doctype();
+
+$fc = Zend_Controller_Front::getInstance();
+$controller = $fc->getRequest()->getControllerName();
+$titleUrl = "img/title-$controller.png";
+?>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
@@ -21,10 +27,10 @@
 
                     <!-- Favicons
                     ================================================== -->
-                    <link rel="shortcut icon" href="images/favicon.ico">
-                    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-                    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-                    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+                    <link rel="shortcut icon" href="<?=$this->baseUrl;?>images/favicon.ico">
+                    <link rel="apple-touch-icon" href="<?=$this->baseUrl?>images/apple-touch-icon.png">
+                    <link rel="apple-touch-icon" sizes="72x72" href="<?=$this->baseUrl;?>images/apple-touch-icon-72x72.png">
+                    <link rel="apple-touch-icon" sizes="114x114" href="<?=$this->baseUrl;?>images/apple-touch-icon-114x114.png">
 
                 </head>
 
@@ -39,10 +45,10 @@
                         <div id="main" role="main" class="seventeen columns">
 
                             <div class="page-title">
-                                <img src="img/title-about.png" />
+                                <?php if(file_exists($titleUrl)) { echo "<img src='$this->baseUrl$titleUrl' />"; } ?>
                             </div>
                             <?= $this->layout()->content; ?>
-                            <a href="/connect/get-a-quote.php" class="get-a-quote"><img src="img/button-get-a-quote.jpg" /></a>
+                            <a href="<?=$this->baseUrl;?>get-a-quote" class="get-a-quote"><img src="<?=$this->baseUrl;?>img/button-get-a-quote.jpg" /></a>
 
                         </div> <!-- #main -->
 

@@ -28,6 +28,12 @@
         <controllerFile controllerName="About">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="GetAQuote">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="DesignQuantified">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
@@ -57,6 +63,12 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="About">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="GetAQuote">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="DesignQuantified">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
@@ -98,6 +110,12 @@
             <testApplicationActionMethod forActionName="about"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Work">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="GetAQuote">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="DesignQuantified">
             <testApplicationActionMethod forActionName="index"/>
           </testApplicationControllerFile>
         </testApplicationControllerDirectory>

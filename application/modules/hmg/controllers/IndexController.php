@@ -17,33 +17,21 @@ class HMG_IndexController extends Zend_Controller_Action
         // $this->getResponse()
         //     ->appendBody('Hello ' . $name . ' from indexAction');
 
-        $date = new Zend_Date();
-        $data = array(
-            'hour' => $date->get(Zend_Date::HOUR),
-            'min' => $date->get(Zend_Date::MINUTE),
-            'sec' => $date->get(Zend_Date::SECOND)
-        );
-
-        $obj = new stdClass();
-        $obj->day = $date->get(Zend_Date::DAY);
-        $obj->month = $date->get(Zend_Date::MONTH);
-        $obj->year= $date->get(Zend_Date::YEAR);
-
-        $this->view->assign($data);
-        $this->view->assign((array) $obj);
     }
 
     public function aboutAction()
     {
         // action body
-        $this->getResponse()->appendBody('Hello from aboutAction mon');
+        // $fc = Zend_Controller_Front::getInstance();
 
-        $this->_forward(
-            'index',
-            'work',
-            null, 
-            array('url' => 'http://portfolio.hmg.com')
-        );
+        // Zend_Debug::dump($fc->getRequest()->getControllerName());
+
+        // $this->_forward(
+        //     'index',
+        //     'work',
+        //     null, 
+        //     array('url' => 'http://portfolio.hmg.com')
+        // );
     }
 
     // public function __call($method, $args) {

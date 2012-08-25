@@ -15,6 +15,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->bootstrap('view');
         $view = $this->getResource('view');
 
+        $view->baseUrl = '/heyyou/';
+        $fc = Zend_Controller_Front::getInstance();
+
+        // path helpers
+        $view->baseUrl = $fc->getBaseUrl()."/";
+
         // encoding and doctype
         $view->doctype('HTML5');
         $view->setEncoding('UTF-8');
