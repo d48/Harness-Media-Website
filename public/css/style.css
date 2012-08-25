@@ -89,6 +89,7 @@ header { position: relative; z-index: 20;}
 
 /* Content
 *************************************************************/
+#view-content { min-height: 300px; }
 #main {
   background-color: #fff;
   -webkit-border-radius: 10px;
