@@ -40,7 +40,7 @@ header { position: relative; z-index: 20;}
 .nav-primary { margin-top: 116px; }
 .nav-primary li, #nav-menu-button { display: inline; font-family: Arial, Helvetica; font-size: 19px; font-weight: bold; margin: 0 30px 0 0; text-transform: uppercase;}
 .nav-primary li a { color: #000; text-decoration: none;}
-.nav-primary li a:hover, .nav-primary li a.selected { color: #ed217c; }
+.nav-primary li a:hover, .nav-primary li.active a{ color: #ed217c; }
 #nav-menu-button { display:none; }
 #nav-menu-button a:hover { color: #ed217c; }
 

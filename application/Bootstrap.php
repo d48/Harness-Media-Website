@@ -15,7 +15,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->bootstrap('view');
         $view = $this->getResource('view');
 
-
         // path helpers
         $fc = Zend_Controller_Front::getInstance();
         $view->baseUrl = $fc->getBaseUrl()."/";
@@ -27,7 +26,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             'maxDepth' => 0,
             'ulClass' => 'nav-primary'
         );
-        $view->navigation = $view->navigation()->menu()->renderMenu($container, $options); 
+        $view->navigation($container);
 
 
         $view->doctype('HTML5');
