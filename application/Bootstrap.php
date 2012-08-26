@@ -15,13 +15,21 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->bootstrap('view');
         $view = $this->getResource('view');
 
-        $view->baseUrl = '/heyyou/';
-        $fc = Zend_Controller_Front::getInstance();
 
         // path helpers
+        $fc = Zend_Controller_Front::getInstance();
         $view->baseUrl = $fc->getBaseUrl()."/";
 
-        // encoding and doctype
+        // Navigation
+        $config = new Zend_Config_Xml(APPLICATION_PATH . '/config/navigation.xml', 'nav');
+        $container = new Zend_Navigation($config);
+        $options = array(
+            'maxDepth' => 0,
+            'ulClass' => 'nav-primary'
+        );
+        $view->navigation = $view->navigation()->menu()->renderMenu($container, $options); 
+
+
         $view->doctype('HTML5');
         $view->setEncoding('UTF-8');
 

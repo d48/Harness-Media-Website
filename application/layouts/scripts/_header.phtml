@@ -10,13 +10,7 @@
 
                             <nav class="ten column">
                             <span id="nav-menu-button"><a href="#">Menu</a></span>
-                            <ul id="nav-primary" role="navigation">
-                                <li><a href="<?=$this->baseUrl;?>work">Work</a></li>     
-                                <li><a href="<?=$this->baseUrl;?>play">Play</a></li>     
-                                <li><a href="<?=$this->baseUrl;?>serve">Serve</a></li>     
-                                <li><a href="<?=$this->baseUrl;?>connect">Connect</a></li>      
-                                <li><a href="<?=$this->baseUrl;?>about">About</a></li>
-                            </ul>
+                            <?= $this->navigation; ?>
                             </nav>
 
                             <a href="<?=$this->baseUrl;?>design-quantified" class="three columns" id="learnmore">

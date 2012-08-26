@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<nav>
+		<page1>
+			<Label>Index</Label>
+			<uri>index</uri>
+			<visible>0</visible>
+		</page1>
+		<page2>
+			<Label>Work</Label>
+			<uri>work</uri>
+		</page2>
+		<page3>
+			<Label>Play</Label>
+			<uri>play</uri>
+		</page3>
+		<page4>
+			<Label>Serve</Label>
+			<uri>serve</uri>
+		</page4>
+		<page5>
+			<Label>Connect</Label>
+			<uri>connect</uri>
+			<pages>
+				<page5_1>
+					<Label>Get A Quote</Label>
+					<uri>get-a-quote</uri>
+				</page5_1>
+			</pages>
+		</page5>
+		<page6>
+			<Label>About</Label>
+			<uri>about</uri>
+			<pages>
+				<page6_1>
+					<Label>Design Quantified</Label>
+					<uri>design-quantified</uri>
+				</page6_1>
+			</pages>
+		</page6>
+	</nav>
+</config>
