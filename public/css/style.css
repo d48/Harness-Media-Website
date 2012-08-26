@@ -171,9 +171,9 @@ input[type="radio"] {
 #detail strong { color: #666; }
 #footer-logo { background: url('../img/sprite.png') no-repeat -1px -438px; margin-top: 10px; width: 105px; height: 108px; }
 
-#nav-secondary { padding-top: 10px; }
-#nav-secondary li { margin-bottom: 0; } 
-#nav-secondary li a { color: #666; font-size: 12px; margin: 0; padding: 0; text-decoration: none; }
+.nav-secondary { padding-top: 10px; }
+.nav-secondary li { margin-bottom: 0; }
+.nav-secondary li a { color: #666; font-size: 12px; margin: 0; padding: 0; text-decoration: none; text-transform: uppercase; }
 
 
 

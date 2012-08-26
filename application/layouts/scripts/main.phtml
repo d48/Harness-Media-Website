@@ -73,9 +73,14 @@ $nav = $this->navigation()->menu()->renderMenu(null, $options);
                                 'label' => 'HM/G Facebook',
                                 'uri' => 'http://www.facebook.com'
                             ));
-                            
+
+                            $optionsSecondary = array(
+                                'maxDepth' => 0,
+                                'ulClass' => 'nav-secondary'
+                            );
+           
                             echo $this->partial('_footer.phtml', array(
-                                'footerNav' => $this->navigation()->menu()->renderMenu(null, $options)
+                                'footerNav' => $this->navigation()->menu()->renderMenu(null, $optionsSecondary)
                             )); 
                         ?>
 
