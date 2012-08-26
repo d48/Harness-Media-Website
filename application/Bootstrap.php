@@ -22,10 +22,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         // Navigation
         $config = new Zend_Config_Xml(APPLICATION_PATH . '/config/navigation.xml', 'nav');
         $container = new Zend_Navigation($config);
-        $options = array(
-            'maxDepth' => 0,
-            'ulClass' => 'nav-primary'
-        );
         $view->navigation($container);
 
 

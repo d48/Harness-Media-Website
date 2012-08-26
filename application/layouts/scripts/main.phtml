@@ -12,7 +12,9 @@ $options = array(
     'maxDepth' => 0,
     'ulClass' => 'nav-primary'
 );
+
 $this->navigation()->findByUri($controller)->setActive(true);
+$nav = $this->navigation()->menu()->renderMenu(null, $options); 
 ?>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -52,7 +54,7 @@ $this->navigation()->findByUri($controller)->setActive(true);
                         <?php 
                             echo $this->partial('_header.phtml', array(
                             'controller' => $controller,
-                            'navigation' => $this->navigation()->menu()->renderMenu($this->container, $options)
+                            'navigation' => $nav
                             )); 
                         ?>
 
@@ -66,7 +68,16 @@ $this->navigation()->findByUri($controller)->setActive(true);
 
                         </div> <!-- #main -->
 
-                        <?= $this->render('_footer.phtml'); ?>
+                        <?php 
+                            $this->navigation()->addPage(array(
+                                'label' => 'HM/G Facebook',
+                                'uri' => 'http://www.facebook.com'
+                            ));
+                            
+                            echo $this->partial('_footer.phtml', array(
+                                'footerNav' => $this->navigation()->menu()->renderMenu(null, $options)
+                            )); 
+                        ?>
 
                     </div> <!-- #container -->
 
