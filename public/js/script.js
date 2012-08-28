@@ -1,5 +1,22 @@
 $(function () {
 
+  // Creates homepage slideshow
+  var HMG-slideshow = {};
+
+  // buttons
+  var slide_button = $('.slideshow .button');
+
+  // events
+  $(slide_button).on('click','onClickSlide', event);
+
+  // methods
+  function onClickSlide(event) {
+    console.log('clicked', event); 
+  };
+
+
+
+
   // /**
   //  * setup variables
   //  */

@@ -16,6 +16,11 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 
+/* Page specific
+*************************************************************/
+.index .get-a-quote { display: none; }
+.index .page-title{ display: none; }
+.index #main { background: transparent; }
 
 /* Header
 *************************************************************/
