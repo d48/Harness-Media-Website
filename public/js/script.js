@@ -1,20 +1,26 @@
 $(function () {
 
   // Creates homepage slideshow
-  var HMG-slideshow = {};
+  var HMGslideshow = {};
 
-  // buttons
-  var slide_button = $('.slideshow .button');
+  // vars 
+  var slide_button = $('.slideshow li')
+    , container = slide_button.parent()
+    ;
 
   // events
-  $(slide_button).on('click','onClickSlide', event);
+  // $(window).load(onLoadPlay);
+  slide_button.on('click','img', event, onClickSlide);
 
   // methods
-  function onClickSlide(event) {
-    console.log('clicked', event); 
+  function onLoadPlay() {
+    setInterval(onClickSlide, 2000);
   };
 
-
+  function onClickSlide() {
+    console.log('sliding');
+    container.children().first().appendTo(container);
+  };
 
 
   // /**
