@@ -1,52 +1,5 @@
                         <footer id="footer" class="seventeen columns">
-                        <div class="row">
-                            <section id="blog-entries" class="one-third column alpha">
-                            <hgroup>
-                            <h1>MARKETING</h1>
-                            <h2>INSIGHTS</h2>
-                            </hgroup>
-                            <ul>
-                                <li><a href="#">Ecommerce<span class="arrow"></span></a></li>
-                                <li><a href="#">Social Media</a></li>
-                                <li><a href="#">Email Marketing</a></li>
-                                <li><a href="#">SEO/SEM</a></li>
-                                <li><a href="#">Landing Pages 2</a></li>
-                            </ul>
-                            </section>
-                            <section id="facebook-module" class="one-third column">
-                            <div class="fb-like-box" data-href="https://www.facebook.com/pages/Rossi-Valentino/50801001459" data-width="310" 
-                                data-height="250" data-show-faces="true" data-border-color="white" data-stream="true" data-header="false"></div>
-                            </section>
-                            <section id="email-signup" class="one-third column omega">
-
-                            <form id="form-newsletter" method="post">
-                                <fieldset id="email-set">
-                                    <label>Email</label>
-                                    <input type="text" name="email" />
-                                </fieldset>
-
-                                <fieldset id="name-set">
-                                    <label>First Name</label>
-                                    <input type="text" name="firstname" />
-                                </fieldset>
-
-                                <fieldset id="gender-set">
-                                    <label for="">Gender</label>
-                                    <div class="radio-container">
-                                        <label for="male-radio"><input type="radio" name="gender" id="male-radio" value="male" /> 
-                                            <span>Male</span>
-                                        </label>
-                                        <label for="female-radio"><input type="radio" name="gender" id="female-radio" value="female" /> 
-                                            <span>Female</span>
-                                        </label>
-                                    </div>
-                                </fieldset>
-                                <button type="submit" id="button-submit">Submit!</button>
-
-                            </form>
-
-                            </section>
-                        </div>
+                        <?=$this->showSocial ? $this->socialBoxes : ''; ?>
 
                         <div class="row">
                             <section id="description" class="twelve columns alpha">

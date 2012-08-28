@@ -80,7 +80,9 @@ $nav = $this->navigation()->menu()->renderMenu(null, $options);
                             );
            
                             echo $this->partial('_footer.phtml', array(
-                                'footerNav' => $this->navigation()->menu()->renderMenu(null, $optionsSecondary)
+                                'footerNav' => $this->navigation()->menu()->renderMenu(null, $optionsSecondary),
+                                'socialBoxes' => $this->partial('_footer-social.phtml'),
+                                'showSocial' => $controller == 'index' ? true : false
                             )); 
                         ?>
 
