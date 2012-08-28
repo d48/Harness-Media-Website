@@ -1,0 +1,7 @@
+build/*
+tests/*
+docs/*
+tests-backup/*
+.zfproject.xml
+bin/*
+data/*
