@@ -121,7 +121,7 @@ header { position: relative; z-index: 20;}
 *************************************************************/
 button { background-color: #ed217c; color:#fff; font-size: 14px; text-transform: uppercase; }
 button:hover, input[type="submit"]:hover, #button-submit:hover { color: #000 !important; }
-.get-a-quote { float: right; margin: 0 22px 22px 0; }
+#main .get-a-quote { float: right; margin: 0 22px 22px 0; }
 
 
 /* Footer 
