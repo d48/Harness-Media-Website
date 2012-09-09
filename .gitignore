@@ -5,3 +5,4 @@ tests-backup/*
 .zfproject.xml
 bin/*
 data/*
+.DS_Store
