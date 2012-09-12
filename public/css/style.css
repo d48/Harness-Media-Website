@@ -24,8 +24,21 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 
 /* slideshow
 *************************************************************/
-.slideshow ul { margin: 0; padding: 0; height: 443px; width: 1023px; overflow: hidden; }
-.slideshow li { list-style-type: none; }
+.slideshow {
+   height: 443px;
+   overflow: hidden;
+}
+
+.slideshow ul { margin: 0; padding: 0;
+  /* overflow: hidden;  */
+}
+.slideshow li { 
+  float: left;
+  height: 443px;
+  list-style-type: none; 
+  margin-bottom: 0;
+  position: relative;
+}
 .slideshow li img { 
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

@@ -5,122 +5,44 @@ $(function () {
 
   // vars 
   var slide_button = $('.slideshow li')
-    , container = slide_button.parent()
+    , slides = $('.slideshow li')
+    , slides_container= slide_button.parent()
     ;
 
-  // events
-  // $(window).load(onLoadPlay);
-  slide_button.on('click','img', event, onClickSlide);
+  // init
+  // set up container width
+  slides_container.css('width', slides.width() * slides.length );
+
+  // click event handler
+  slides.on('click','img', event, onClickSlide);
 
   // methods
   function onLoadPlay() {
     setInterval(onClickSlide, 2000);
-  };
+  }
 
+  /**
+   * handler to slide the next image in the slideshow
+   */
   function onClickSlide() {
-    console.log('sliding');
-    container.children().first().appendTo(container);
-  };
+    console.log('clicked', this, event);
 
+    var secondToLastIndex = slides.length - 1;
 
-  // /**
-  //  * setup variables
-  //  */
-  // var header            = $('header')
-  //   , body              = $('body')
-  //   , navButton         = $('#nav-menu-button')
-  //   , navLinks          = $('#nav-primary')
-  //   , mobileView        = $('html').width() <= 768
-  //   , headerPosition    = header.offset()
-  //   , offsetBug         = (header.height() / 2)
-  //   , yCoordForFixedNav = headerPosition.top + header.height() - offsetBug
-  //   ;
+    // check for last slide
+    if( $('.slideshow li:nth-child('+secondToLastIndex+') img')[0] == this) {
+      // append previous slides
+      console.log('last slide reached');
 
+    }
 
-  // /**
-  //  * Shows persistent navigation
-  //  * 
-  //  * @return void
-  //  */
-  // function showFixedNav() {
-  //   body.removeClass('default').addClass('fixed');
-  //   body.removeClass('open');
-  //   // adjust for height resizing
-  //   window.scroll(0,1);
-
-  //   // always hide menu on mobile view
-  //   if($('html').width()<=768) { 
-  //     navLinks.hide(); 
-  //   } else {
-  //     navLinks.show();
-  //   }
-  // }
-
-  // /**
-  //  * Hides persistent navigation
-  //  * 
-  //  */
-  // function hideFixedNav() {
-  //   body.removeClass('fixed').addClass('default');
-  //   // adjust for height resizing
-  //   window.scroll(0, offsetBug-1);
-
-  //   // nav links always show by default
-  //   navLinks.show();
-  // }
-
-  // // Navigation
-  // // -------------------------------------------------------------------------
-  // 
-  // /**
-  //  * adds persistent navigation  
-  //  */
-  // $(window).scroll(function setFixedNavigation () {
-
-  //   // Show fixed position menu
-  //   if ($(this).scrollTop() > yCoordForFixedNav && body.hasClass('default')) {
-  //     showFixedNav();
-  //   } 
-  //   // Show regular menu
-  //   else if ($(this).scrollTop() <= headerPosition.top && body.hasClass('fixed')) {
-  //     hideFixedNav();
-  //   }
-  // });
-
-  // /**
-  //  * for local debugging, add resize function 
-  //  */
-  // $(window).resize(function resizeWindow() {
-  //   // hide links if showing persistent nav
-  //   if($('html').width()<=768 && body.hasClass('fixed')) { 
-  //     navLinks.hide(); 
-  //   } else {
-  //     navLinks.show();
-  //   }
-  //   body.removeClass('open');
-  // });
-
-
-
-  // // Events
-  // // -------------------------------------------------------------------------
-
-  // /**
-  //  * menu toggle for mobile view  
-  //  */
-  // $('nav').on('click', navButton,
-
-  //   function navMenuClick(e) {
-  //     if(navLinks.is(':hidden')) {
-  //       body.addClass('open');
-  //       navLinks.show();
-  //     } else {
-  //       body.removeClass('open');
-  //       navLinks.hide();
-  //     }
-  //     e.preventDefault();
-
-  //   }
-  // );
-
+    // animating the slide
+    slides
+      .animate({
+        left: '-=' + $(this).width()
+      },
+      {
+        duration: 800  
+      });
+  }
 });
