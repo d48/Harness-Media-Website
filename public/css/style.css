@@ -26,6 +26,11 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
 *************************************************************/
 .slideshow ul { margin: 0; padding: 0; height: 443px; width: 1023px; overflow: hidden; }
 .slideshow li { list-style-type: none; }
+.slideshow li img { 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
 
 
 
