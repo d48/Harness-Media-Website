@@ -22,7 +22,7 @@ Preview work in progress on github here: http://design48.github.com/Harness-Medi
 * ~~cross-browser persistent nav responsive styling~~
 	* ~~view persistent nav here: http://design48.net/clients/hmg/public/old-index.html~~
 	* will have persistent nav on phase 2
-* homepage content layout
+* ~~homepage content layout~~
 * slider programming
 
 ### 0.3 Todo List
