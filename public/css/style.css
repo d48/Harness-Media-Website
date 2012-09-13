@@ -133,7 +133,7 @@ header { position: relative; z-index: 20;}
   z-index: 10px;
 }
 #main p { font-size: 16px; margin: 0 auto 25px auto; width: 85%; }
-#main .page-title { margin: 36px auto 20px auto; width: 85%; }
+#main .page-title { margin: 24px auto 20px auto; width: 86%; }
 
 /* Buttons
 *************************************************************/
