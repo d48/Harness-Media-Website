@@ -29,7 +29,10 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
    overflow: hidden;
 }
 
-.slideshow ul { margin: 0; padding: 0;
+.slideshow ul { 
+  margin: 0; 
+  padding: 0;
+  position: relative;
   /* overflow: hidden;  */
 }
 .slideshow li { 

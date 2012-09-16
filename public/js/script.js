@@ -1,48 +1,58 @@
-$(function () {
+// Creates homepage slideshow
+var HMG = {
 
-  // Creates homepage slideshow
-  var HMGslideshow = {};
+  /**
+   * Start lifecycle of widget 
+   */
+  init: function( config ) {
+    this.config = config;
 
-  // vars 
-  var slide_button = $('.slideshow li')
-    , slides = $('.slideshow li')
-    , slides_container= slide_button.parent()
-    ;
+    // set outer container
+    $(this.config.slides).parent().css('width', $(this.config.slides).width() * $(this.config.slides).length );
 
-  // init
-  // set up container width
-  slides_container.css('width', slides.width() * slides.length );
-
-  // click event handler
-  slides.on('click','img', event, onClickSlide);
-
-  // methods
-  function onLoadPlay() {
-    setInterval(onClickSlide, 2000);
-  }
+    // begin auto-rotate
+    if ( $(this.config.slides).length > 0 ) {
+      window.setInterval(this.nextSlide, 4000);
+    }
+  },
 
   /**
    * handler to slide the next image in the slideshow
    */
-  function onClickSlide() {
-    console.log('clicked', this, event);
+  nextSlide: function() {
+    // reference to object
+    var self = HMG;
 
-    var secondToLastIndex = slides.length - 1;
-
-    // check for last slide
-    if( $('.slideshow li:nth-child('+secondToLastIndex+') img')[0] == this) {
-      // append previous slides
-      console.log('last slide reached');
-
-    }
+    // copy first slide to last post
+    $(self.config.slides)
+      .first().clone(true)
+      .appendTo( $(self.config.slides).parent() );
 
     // animating the slide
-    slides
-      .animate({
-        left: '-=' + $(this).width()
-      },
-      {
-        duration: 800  
-      });
+    $(self.config.slidesContainer).animate(
+        { left: '-=' + $(self.config.slides).width() }
+      , 800
+      , 'swing'
+      , function removeFirstSlide() { 
+          // remove first slide
+          $(self.config.slides).first().remove();
+          
+          // reset left attribute for next slide
+          $(self.config.slidesContainer).css('left',0);
+            
+        }
+    );
   }
-});
+}; // HMG
+
+(function() {
+
+  /**
+   * setup dom elements  
+   */
+  HMG.init({
+      slides: '.slideshow li'
+    , slidesContainer: '.slideshow ul'
+  });
+
+})();
