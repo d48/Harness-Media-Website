@@ -14,6 +14,16 @@ var HMG = {
     if ( $(this.config.slides).length > 0 ) {
       window.setInterval(this.nextSlide, 4000);
     }
+
+    // Event handlers
+    $(this.config.slides).on('click',this.clickSlide);
+  },
+
+  /**
+   * slideshow click handler 
+   */
+  clickSlide: function(e) {
+    e.preventDefault();
   },
 
   /**
