@@ -11,7 +11,7 @@ var HMG = {
 
     // begin auto-rotate
     if ( $(this.config.slides).length > 0 ) {
-      // window.setInterval(this.nextSlide, 4000);
+      window.setInterval(this.nextSlide, 4000);
     }
 
     // Event handlers
@@ -55,13 +55,12 @@ var HMG = {
             
           // activateNumber
           var currentSlide = $(self.config.slides).first();
-          console.log("this is current slide ID", $(currentSlide).data('id'));
-
           self.showSelected( $(currentSlide).data('id') );
         }
     );
   },
 
+  // highlight current slide number
   showSelected: function( currentSlide ) {
     var self = HMG;
 
