@@ -79,7 +79,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         );
         $view->headMeta()->appendName(
             'viewport', 
-            'width=device-width;initial-scale=1;maximum-scale=1'
+            'width=device-width,initial-scale=1,maximum-scale=1'
         );
 
         // styles

@@ -1,9 +1,8 @@
 // Creates homepage slideshow
 var HMG = {
 
-  /**
-   * Start lifecycle of widget 
-   */
+  // Start lifecycle of widget 
+  // --------------------------------------------------------------------------
   init: function( config ) {
     this.config = config;
 
@@ -19,16 +18,16 @@ var HMG = {
     $(this.config.slides).on('click',this.clickSlide);
   },
 
-  /**
-   * slideshow click handler 
-   */
+
+  // Click handler
+  // --------------------------------------------------------------------------
   clickSlide: function(e) {
     e.preventDefault();
   },
 
-  /**
-   * handler to slide the next image in the slideshow
-   */
+
+  // Handler to slide the next image in the slideshow
+  // --------------------------------------------------------------------------
   nextSlide: function() {
     // reference to object
     var self = HMG;
