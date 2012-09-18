@@ -11,7 +11,7 @@ var HMG = {
 
     // begin auto-rotate
     if ( $(this.config.slides).length > 0 ) {
-      window.setInterval(this.nextSlide, 4000);
+      // window.setInterval(this.nextSlide, 4000);
     }
 
     // Event handlers
@@ -28,14 +28,16 @@ var HMG = {
 
   // Handler to slide the next image in the slideshow
   // --------------------------------------------------------------------------
-  nextSlide: function() {
+  nextSlide: function(e) {
     // reference to object
     var self = HMG;
 
+    
     // copy first slide to last post
     $(self.config.slides)
       .first().clone(true)
       .appendTo( $(self.config.slides).parent() );
+
 
     // animating the slide
     $(self.config.slidesContainer).animate(
@@ -43,14 +45,29 @@ var HMG = {
       , 800
       , 'swing'
       , function removeFirstSlide() { 
+
+
           // remove first slide
           $(self.config.slides).first().remove();
           
           // reset left attribute for next slide
           $(self.config.slidesContainer).css('left',0);
             
+          // activateNumber
+          var currentSlide = $(self.config.slides).first();
+          console.log("this is current slide ID", $(currentSlide).data('id'));
+
+          self.showSelected( $(currentSlide).data('id') );
         }
     );
+  },
+
+  showSelected: function( currentSlide ) {
+    var self = HMG;
+
+    $(self.config.numbersContainer).find("li[class='selected']").removeClass('selected')
+    var slideToSelect = $(self.config.numbersContainer).find("li[data-id='"+ currentSlide +"']");
+    slideToSelect.addClass('selected');
   }
 }; // HMG
 
@@ -60,9 +77,11 @@ var HMG = {
    * setup dom elements  
    */
   HMG.init({
-      slides: '.slideshow li'
-    , slidesContainer: '.slideshow ul'
+      slides: '.slides li'
+    , slidesContainer: '.slides'
     , slideWidth: 1024
+    , numbers: '.numbers li'
+    , numbersContainer: '.numbers'
   });
 
 })();

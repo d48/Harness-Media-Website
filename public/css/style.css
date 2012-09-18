@@ -29,23 +29,47 @@ body { background: url(../img/hmg_bkd.jpg) top center #fff fixed; }
    overflow: hidden;
 }
 
-.slideshow ul { 
+.slideshow .slides { 
   margin: 0; 
   padding: 0;
   position: relative;
-  /* overflow: hidden;  */
 }
-.slideshow li { 
+.slideshow .slides li { 
   float: left;
   height: 443px;
   list-style-type: none; 
   margin-bottom: 0;
   position: relative;
 }
-.slideshow li img { 
+.slideshow .slides li img { 
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
+
+.numbers {
+  bottom: 0;
+  left: 20px;
+  position: absolute;
+  z-index: 10;
+}
+
+.numbers li {
+  background: url('../img/sprite.png') no-repeat -4px -296px;
+  color: #fff;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 29px;
+  line-height: 29px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+}
+.numbers li.selected {
+  background: url('../img/sprite.png') no-repeat -4px -249px;
 }
 
 
