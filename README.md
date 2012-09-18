@@ -24,7 +24,8 @@ Preview work in progress on github here: http://design48.github.com/Harness-Medi
 	* will have persistent nav on phase 2
 * ~~homepage content layout~~
 * ~~slider programming~~
-	* dynamic slider numbers
+	* ~~dynamic slider numbers~~
+	* fade in/out slide number highlight
 
 ### 0.3 Todo List
 
