@@ -8,7 +8,7 @@ var HMG = {
     this.config = config;
 
     // set outer container
-    $(this.config.slides).parent().css('width', $(this.config.slides).width() * $(this.config.slides).length );
+    $(this.config.slides).parent().css('width', this.config.slideWidth * $(this.config.slides).length );
 
     // begin auto-rotate
     if ( $(this.config.slides).length > 0 ) {
@@ -53,6 +53,7 @@ var HMG = {
   HMG.init({
       slides: '.slideshow li'
     , slidesContainer: '.slideshow ul'
+    , slideWidth: 1024
   });
 
 })();
