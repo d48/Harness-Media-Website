@@ -30,5 +30,7 @@ Preview work in progress on github here: http://design48.github.com/Harness-Medi
 ### 0.3 Todo List
 
 * ~~mvc setup for all pages~~
+* ~~configure test deployment to server via git~~ *
+* set up hmg repo to post to server using post-commit hook and ssh keys *
 * portfolio layout and content
 
