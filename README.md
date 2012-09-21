@@ -2,7 +2,7 @@
 
 Website for Harness Media Group. 
 
-Preview work in progress on github here: http://design48.github.com/Harness-Media-Website/
+Preview work in progress here: http://hmg.design48.net
 
 ## Road Map
 
