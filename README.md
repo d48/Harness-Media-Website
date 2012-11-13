@@ -26,6 +26,7 @@ Preview work in progress here: http://hmg.design48.net
 * ~~slider programming~~
 	* ~~dynamic slider numbers~~
 	* fade in/out slide number highlight
+	* udpate js to create api with slideshow method
 
 ### 0.3 Todo List
 
