@@ -34,4 +34,6 @@ Preview work in progress here: http://hmg.design48.net
 * ~~configure test deployment to server via git~~ *
 * set up hmg repo to post to server using post-commit hook and ssh keys *
 * portfolio layout and content
+* pull info from database
+* setup admin for database content
 
