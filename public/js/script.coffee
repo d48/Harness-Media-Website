@@ -3,18 +3,20 @@
 # Start lifecycle of widget 
 # --------------------------------------------------------------------------
 init = (@config) -> 
+  slideShow(@config)
 
-  # set outer container
-  $(@config.slides).parent().css('width', @config.slideWidth * $(@config.slides).length )
+  # click handlers
+  $('.work').on 'click', '.thumbs li', workExpand
 
-  # begin auto-rotate
-  if $(@config.slides).length > 0
-    window.setInterval nextSlide, 4000
 
-  # Event handlers
-  $(@config.slides).on 'click', @clickSlide
+# Work page thumbnails to display info
+workExpand = (e) ->
+  e.preventDefault()
 
-# Click handler
+  console.log 'clicked'
+
+
+# slide click handler
 # --------------------------------------------------------------------------
 clickSlide = (e) -> 
   e.preventDefault()
@@ -53,6 +55,20 @@ showSelected = (currentSlide) ->
   $(@config.numbersContainer).find("li[class='selected']").removeClass 'selected'
   slideToSelect = $(@config.numbersContainer).find "li[data-id='#{currentSlide}']"
   slideToSelect.addClass 'selected'
+
+
+# start the slideshow for featured projects
+slideShow = (config) ->
+  # set outer container
+  $(config.slides).parent().css('width', @config.slideWidth * $(@config.slides).length )
+
+  # begin auto-rotate
+  if $(config.slides).length > 0
+    window.setInterval nextSlide, 4000
+
+  # Event handlers
+  $(config.slides).on 'click', clickSlide
+
 
 #
 # Main: setup dom elements  

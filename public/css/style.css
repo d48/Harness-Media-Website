@@ -9,7 +9,9 @@
 		#Footer
     #Non-semantic helper classes
 		#Media-Queries	
-		*/
+
+    #Work
+*/
 
 
 /* ==|== Primary styles ===================================================== */
@@ -145,7 +147,7 @@ header { position: relative; z-index: 20;}
 
 /* Content
 *************************************************************/
-#view-content { min-height: 300px; }
+#view-content { min-height: 300px; padding: 0 20px; }
 #main {
   background-color: #fff;
   -webkit-border-radius: 10px;
@@ -165,7 +167,7 @@ header { position: relative; z-index: 20;}
 *************************************************************/
 button { background-color: #ed217c; color:#fff; font-size: 14px; text-transform: uppercase; }
 button:hover, input[type="submit"]:hover, #button-submit:hover { color: #000 !important; }
-#main .get-a-quote { float: right; margin: 0 22px 22px 0; }
+#main .get-a-quote { clear: both; float: right; margin: 0 22px 22px 0; }
 
 
 /* Footer 
@@ -263,4 +265,67 @@ input[type="radio"] {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
+}
+
+
+
+/* Work
+*************************************************************/
+.work #view-content {
+  padding-right: 0;
+}
+#work-nav {
+  list-style-type: none;
+  position: absolute;
+  left: 190px;
+  top: 27px;
+}
+#work-nav li {
+  border-left: 1px solid #333;
+  display: inline;
+  float: left;
+  padding: 0 12px;
+}
+#work-nav li:first-child {
+  border-left: none;
+}
+#work-nav a:hover {
+ color: #ed217c; 
+}
+#work-nav .active {
+ color: #ed217c; 
+ text-decoration: underline;
+}
+
+.work .thumbs {
+  clear: both;
+}
+.work .thumbs li {
+  background-color: #000;
+  float: left;
+
+  height: 235px;
+  width: 317px; 
+
+  margin-right: 14px;
+  margin-bottom: 14px;
+}
+.work .thumbs li:hover {
+  border: 1px solid #ed217c; 
+  cursor: pointer;
+}
+.work .thumbs a {
+  color: #fff;
+  display: block;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0 50px;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+.work .thumbs li:hover a {
+  color: #ed217c;
+  margin-top: -1px;
 }
