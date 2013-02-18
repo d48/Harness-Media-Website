@@ -7,13 +7,29 @@ init = (@config) ->
 
   # click handlers
   $('.work').on 'click', '.thumbs li', workExpand
+  $('.work').on 'click', '#close', workClose
 
 
 # Work page thumbnails to display info
 workExpand = (e) ->
   e.preventDefault()
 
-  console.log 'clicked'
+  # open overlay
+  # @todo make into handlebar or doT.js pre-compiled template so can pass data to
+  d = document.body
+  h = $(d).innerHeight()
+  overlay = $('#template-work-overlay').html()
+  $(d).append(overlay)
+
+  # set height form viewport
+  $('#overlay').css('height', h)
+
+
+# close portfolio work detail
+workClose = (e) ->
+  e.preventDefault()
+
+  $('#overlay').remove()
 
 
 # slide click handler
@@ -58,6 +74,7 @@ showSelected = (currentSlide) ->
 
 
 # start the slideshow for featured projects
+# @todo break out slideshow in it's own plugin file
 slideShow = (config) ->
   # set outer container
   $(config.slides).parent().css('width', @config.slideWidth * $(@config.slides).length )

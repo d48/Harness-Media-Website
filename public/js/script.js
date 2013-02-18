@@ -1,15 +1,26 @@
 (function() {
-  var clickSlide, init, nextSlide, showSelected, slideShow, workExpand;
+  var clickSlide, init, nextSlide, showSelected, slideShow, workClose, workExpand;
 
   init = function(config) {
     this.config = config;
     slideShow(this.config);
-    return $('.work').on('click', '.thumbs li', workExpand);
+    $('.work').on('click', '.thumbs li', workExpand);
+    return $('.work').on('click', '#close', workClose);
   };
 
   workExpand = function(e) {
+    var d, h, overlay;
     e.preventDefault();
-    return console.log('clicked');
+    d = document.body;
+    h = $(d).innerHeight();
+    overlay = $('#template-work-overlay').html();
+    $(d).append(overlay);
+    return $('#overlay').css('height', h);
+  };
+
+  workClose = function(e) {
+    e.preventDefault();
+    return $('#overlay').remove();
   };
 
   clickSlide = function(e) {
