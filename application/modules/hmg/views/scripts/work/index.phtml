@@ -18,28 +18,28 @@
 </div>
 
 <script type="text/template" id="template-work-overlay">
-    <div id="overlay">
-        <div id="bg">
-            <span id="close">X</span>
+<div id="overlay">
+    <div id="bg">
+        <span id="close">X</span>
 
-            <img src="img/work-fpo.png" alt="fpo" />
+        <img src="img/work-fpo.png" alt="fpo" />
 
-            <h2>THE PROJECT TITLE</h2>
+        <h2>{{=it.title}}</h2>
 
-            <ul id="project-thumbs">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <ul id="project-thumbs">
+            {{~it.pictures :value:index}}
+            <li>{{=value}}</li>
+            {{~}}
+        </ul>
 
-            <p>Short description goes here and should be very descriptive of the overall project. Two to 3 sentences max.</p>
+        <p>{{=it.description}}</p>
 
-            <p><strong>Tech:</strong></p>
-
-            <p>FRY E-Commerce Endecea Scene7 Gomez WordPress Omniture/SiteCatalyst Google Analytics</p>
-        </div>
+        <p><strong>Tech:</strong></p>
+        <ul id="services">
+            {{~it.services :value:index}}
+            <li>{{=value}}</li>
+            {{~}}
+        </ul>
     </div>
+</div>
 </script>

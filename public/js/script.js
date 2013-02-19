@@ -9,12 +9,20 @@
   };
 
   workExpand = function(e) {
-    var d, h, overlay;
+    var d, data, h, html, overlay, tempFn;
     e.preventDefault();
+    data = {
+      description: 'My short description goes here and should be very descriptive of the overall project. Two to 3 sentences max.',
+      pictures: ['img/work-fpo-pictures.png', 'img/work-fpo-pictures.png', 'img/work-fpo-pictures.png', 'img/work-fpo-pictures.png', 'img/work-fpo-pictures.png', 'img/work-fpo-pictures.png'],
+      services: ['FRY', 'ECommerce', 'Endecea', 'Scene7', 'Gomez', 'WordPress', 'Omniture/SiteCatalyst', 'Google Analytics'],
+      title: 'The Project Title'
+    };
+    overlay = $('#template-work-overlay').html();
+    tempFn = doT.template(overlay);
+    html = tempFn(data);
     d = document.body;
     h = $(d).innerHeight();
-    overlay = $('#template-work-overlay').html();
-    $(d).append(overlay);
+    $(d).append(html);
     return $('#overlay').css('height', h);
   };
 

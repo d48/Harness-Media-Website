@@ -14,12 +14,42 @@ init = (@config) ->
 workExpand = (e) ->
   e.preventDefault()
 
+  # content
+
+  data = 
+    description: 'My short description goes here and should be very descriptive of the overall project. Two to 3 sentences max.'
+    pictures: [
+      'img/work-fpo-pictures.png'
+      'img/work-fpo-pictures.png'
+      'img/work-fpo-pictures.png'
+      'img/work-fpo-pictures.png'
+      'img/work-fpo-pictures.png'
+      'img/work-fpo-pictures.png'
+    ]
+    services: [
+      'FRY'
+      'ECommerce'
+      'Endecea'
+      'Scene7'
+      'Gomez'
+      'WordPress'
+      'Omniture/SiteCatalyst'
+      'Google Analytics'
+    ]
+    title: 'The Project Title'
+
+  # get template
+  overlay = $('#template-work-overlay').html()
+  tempFn = doT.template(overlay)
+  html = tempFn(data)
+
+
   # open overlay
   # @todo make into handlebar or doT.js pre-compiled template so can pass data to
   d = document.body
   h = $(d).innerHeight()
-  overlay = $('#template-work-overlay').html()
-  $(d).append(overlay)
+  # overlay = $('#template-work-overlay').html()
+  $(d).append(html)
 
   # set height form viewport
   $('#overlay').css('height', h)
