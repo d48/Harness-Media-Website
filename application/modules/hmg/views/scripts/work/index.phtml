@@ -1,4 +1,3 @@
-
 <ul id="work-nav">
     <li><a href="#">WEB/DIGITAL</a></li>
     <li><a href="#" class="active">IDENTITY</a></li>
@@ -7,7 +6,7 @@
 </ul>
 <div id="view-content">
     <ul class="thumbs">
-        <li><a href="#">Nike/Hurley: USOPEN 2012</a></li>
+        <?= $this->thumbnailHTML; ?>
         <li><a href="#">ONEILL</a></li>
         <li><a href="#">TLFI</a></li>
         <li><a href="#">KILLERDANA</a></li>
@@ -16,6 +15,11 @@
         <li><a href="#">Skateboards</a></li>
     </ul>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+    var HMG = {};
+    HMG.data = <? echo json_encode($this->data); ?>
+</script>
 
 <script type="text/template" id="template-work-overlay">
 <div id="overlay">

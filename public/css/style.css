@@ -275,6 +275,7 @@ input[type="radio"] {
   padding-right: 0;
 }
 #work-nav {
+  display: none;
   list-style-type: none;
   position: absolute;
   left: 190px;

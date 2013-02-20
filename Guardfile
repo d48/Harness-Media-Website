@@ -3,7 +3,7 @@
 
 guard 'livereload' do
   watch(%r{public/.+\.(css|js|html)})
-  watch(%r{application/.+\.(css|js|phtml)})
+  watch(%r{application/.+\.(css|js|phtml|php)})
 end
 
 guard 'coffeescript', :input => 'public/js', :output => 'public/js'
