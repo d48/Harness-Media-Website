@@ -1,0 +1,28 @@
+{
+  "name": "Harness-Media-Website",
+  "version": "0.0.1",
+  "description": "Harness Media Website",
+  "main": "grunt.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha -R spec test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/d48/Harness-Media-Website.git"
+  },
+  "keywords": [
+    "hmg",
+    "Harness",
+    "Media",
+    "Harness",
+    "Media",
+    "design"
+  ],
+  "author": "Ryan Regalado",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
