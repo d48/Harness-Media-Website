@@ -7,12 +7,6 @@
 <div id="view-content">
     <ul class="thumbs">
         <?= $this->thumbnailHTML; ?>
-        <!-- <li><a href="#">ONEILL</a></li> -->
-        <!-- <li><a href="#">TLFI</a></li> -->
-        <!-- <li><a href="#">KILLERDANA</a></li> -->
-        <!-- <li><a href="#">CONTIKI</a></li> -->
-        <!-- <li><a href="#">FMF</a></li> -->
-        <!-- <li><a href="#">Skateboards</a></li> -->
     </ul>
 </div>
 
@@ -22,17 +16,17 @@
 </script>
 
 <script type="text/template" id="template-work-overlay">
-<div id="overlay">
+<div id="work-overlay">
     <div id="bg">
         <span id="close">X</span>
 
-        <img src="img/work-fpo.png" alt="fpo" />
+        <img id="pic-main" src="img/work-fpo.png" alt="fpo" />
 
         <h2>{{=it.title}}</h2>
 
         <ul id="project-thumbs">
             {{~it.pictures :value:index}}
-            <li>{{=value}}</li>
+            <li><img src="{{=value}}" /></li>
             {{~}}
         </ul>
 

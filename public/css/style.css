@@ -331,7 +331,7 @@ input[type="radio"] {
   margin-top: -1px;
 }
 
-#overlay {
+#work-overlay {
   background: rgba(255, 255, 255, 0.9);
   position: absolute; 
   top: 0;
@@ -339,4 +339,10 @@ input[type="radio"] {
   height: 100%;
   width: 100%;
   z-index: 99;
+}
+#work-overlay #pic-main {
+  float: left; 
+}
+#work-overlay h2 {
+  float: left; 
 }

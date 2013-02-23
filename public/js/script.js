@@ -9,21 +9,22 @@
   };
 
   workExpand = function(e) {
-    var d, data, h, html, overlay, tempFn;
+    var d, data, h, html, key, overlay, tempFn;
     e.preventDefault();
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
+    key = $(this).find('a').data('key');
     data = HMG.data;
-    html = tempFn(data);
+    html = tempFn(data[key]);
     d = document.body;
     h = $(d).innerHeight();
     $(d).append(html);
-    return $('#overlay').css('height', h);
+    return $('#work-overlay').css('height', h);
   };
 
   workClose = function(e) {
     e.preventDefault();
-    return $('#overlay').remove();
+    return $('#work-overlay').remove();
   };
 
   clickSlide = function(e) {

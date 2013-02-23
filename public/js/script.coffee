@@ -17,26 +17,26 @@ workExpand = (e) ->
   # get template
   overlay = $('#template-work-overlay').html()
   tempFn = doT.template(overlay)
-  data = HMG.data 
-  html = tempFn(data)
+  key = $(this).find('a').data('key')
+  data = HMG.data
+  html = tempFn(data[key])
 
 
   # open overlay
   # @todo make into handlebar or doT.js pre-compiled template so can pass data to
   d = document.body
   h = $(d).innerHeight()
-  # overlay = $('#template-work-overlay').html()
   $(d).append(html)
 
   # set height form viewport
-  $('#overlay').css('height', h)
+  $('#work-overlay').css('height', h)
 
 
 # close portfolio work detail
 workClose = (e) ->
   e.preventDefault()
 
-  $('#overlay').remove()
+  $('#work-overlay').remove()
 
 
 # slide click handler
