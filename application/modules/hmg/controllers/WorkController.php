@@ -8,27 +8,32 @@ class HMG_WorkController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
 
+    /**
+     * Create HTML for thumbnails on work page and their data attribute
+     * @name buildThumbnails 
+     * 
+     * @param {Object} $wData - Array of data to use
+     * @access public
+     * @return {String} $output - HTML for list elements
+     */
     public function buildThumbnails($wData) {
-        // Zend_Debug::dump($wData);
-        // exit;
         $output = '';
 
-        echo print_r(array_keys($wData));
-        exit;
-
-        foreach($wData as $key) {
-            foreach($key as $name) {
-                echo $name;
-                echo '</br>';
-            }
-            // $li = '<li><a href="#" data-key="' . $key . '">' . $key["title"] . '</a></li>';
-            echo '</br>';
+        foreach($wData as $key => $value) {
+            $output .= '<li><a href="#" data-key="' . $key . '">' . $value["title"] . '</a></li>';
         }
-        exit;
 
         return $output;
     }
 
+    /**
+     * Set up default data 
+     * @name indexAction 
+     * 
+     * @access public
+     * @return void - Creates view variables for display and js click handling
+     * @todo setup database store for site data
+     */
     public function indexAction()
     {
         $description = 'Short description goes here and hello be very descriptive of the overall project. Two to 3 sentences max.';
@@ -70,7 +75,7 @@ class HMG_WorkController extends Zend_Controller_Action
         $killerdana['title'] = 'KILLERDANA';
 
         $contiki = $nike;
-        $contikie['title'] = 'CONTIKI';
+        $contiki['title'] = 'CONTIKI';
 
         $fmf = $nike;
         $fmf['title'] = 'FMF';
