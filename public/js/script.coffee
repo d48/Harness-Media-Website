@@ -1,5 +1,7 @@
+$ = jQuery
+
 # Creates homepage slideshow
-#
+
 # Start lifecycle of widget 
 # --------------------------------------------------------------------------
 init = (@config) -> 

@@ -6,3 +6,4 @@ tests-backup/*
 bin/*
 data/*
 .DS_Store
+node_modules/*

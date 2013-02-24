@@ -8,25 +8,32 @@ module.exports = function(grunt) {
       banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '<%= pkg.homepage ? "* " + pkg.homepage + "\n" : "" %>' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-        ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
+        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>;' +
+        ' Licensed <%= pkg.license %> */'
     },
     lint: {
-      files: ['grunt.js', 'lib/**/*.js', 'tests/**/*.js']
+      files: ['grunt.js', 'public/js/script.js', 'tests/**/*.js']
     },
     qunit: {
       files: ['tests/**/*.html']
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:lib/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
+        src: [
+            'public/js/libs/jquery-1.8.0.min.js'
+          , 'public/js/libs/doT.min.js'
+          , 'public/js/plugins.js'
+          , 'public/js/script.js'
+          , 'public/js/libs/cufon-yui.js'
+          , 'public/js/libs/Avenir_400-Avenir_900.font.js'
+        ]
+        , dest: 'public/js/<%= pkg.name %>.js'
       }
     },
     min: {
       dist: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'public/js/<%= pkg.name %>.min.js'
       }
     },
     watch: {
@@ -45,10 +52,13 @@ module.exports = function(grunt) {
         undef: true,
         boss: true,
         eqnull: true,
-        browser: true
+        browser: true,
+        laxcomma: true
       },
       globals: {
-        jQuery: true
+        jQuery: true,
+        doT: true,
+        HMG: true
       }
     },
     uglify: {}

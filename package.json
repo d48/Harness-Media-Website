@@ -2,6 +2,7 @@
   "name": "Harness-Media-Website",
   "version": "0.0.1",
   "description": "Harness Media Website",
+  "homepage": "http://www.harnessmediagroup.com",
   "main": "grunt.js",
   "directories": {
     "doc": "docs",
@@ -24,5 +25,8 @@
   ],
   "author": "Ryan Regalado",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt-mocha-test": "~0.2.0"
+  }
 }
