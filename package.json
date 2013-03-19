@@ -9,7 +9,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha -R spec test/*.js"
+    "test": "mocha -R spec tests/js/*"
   },
   "repository": {
     "type": "git",

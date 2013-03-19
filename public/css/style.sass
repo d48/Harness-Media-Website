@@ -1,0 +1,542 @@
+// Primary styles
+/* *  */
+/*   -moz-box-sizing: border-box */
+/*   -webkit-box-sizing: border-box */
+/*   box-sizing: border-box */
+
+body 
+  background: url(../img/hmg_bkd.jpg) top center #fff fixed 
+
+// Page specific
+.index 
+  .get-a-quote 
+    display: none
+
+  .page-title
+    display: none
+
+  #main 
+    background: transparent
+
+/* slideshow
+ *************************************************************/
+.slideshow 
+  height: 443px
+  overflow: hidden
+
+  .slides  
+    margin: 0 
+    padding: 0
+    position: relative
+
+    li  
+      float: left
+      height: 443px
+      list-style-type: none
+      margin-bottom: 0
+      position: relative
+
+      img
+        -webkit-border-radius: 10px
+        -moz-border-radius: 10px
+        border-radius: 10px
+
+.numbers
+  bottom: 0
+  left: 20px
+  position: absolute
+  z-index: 10
+
+  li
+    background: url('../img/sprite.png') no-repeat -4px -296px
+    color: #fff
+    float: left
+    font-size: 14px
+    font-weight: bold
+    height: 29px
+    line-height: 29px
+    margin-bottom: 0
+    margin-right: 10px
+    padding: 0
+    text-align: center
+    width: 36px
+
+    &.selected
+      background: url('../img/sprite.png') no-repeat -4px -249px
+
+
+/* Header
+ *************************************************************/
+header 
+  position: relative
+  z-index: 20px
+
+#logo 
+  margin-top: 10px
+  &.sprite
+    background: url('../img/sprite.png') no-repeat -1px -1px
+    width: 166px
+    height: 180px
+    text-indent: -9999px
+
+    a 
+      display: block
+      height: 180px
+      width: 166px
+
+#learnmore
+  float: right
+  margin: 100px -4px 14px 0
+  width: auto
+
+
+/* Navigation
+ *************************************************************/
+.nav-primary
+  margin-top: 116px
+
+  li, #nav-menu-button 
+    display: inline
+    font-family: Arial, Helvetica
+    font-size: 19px
+    font-weight: bold
+    margin: 0 30px 0 0
+    text-transform: uppercase
+
+    &.active a
+      color: #ed217c
+
+    a
+      color: #000
+      text-decoration: none
+
+      &:hover
+        color: #ed217c
+
+#nav-menu-button
+  display: none
+
+  a:hover
+    color: #ed217c
+
+/* Nav persistent
+ ******************************/
+.fixed 
+  &.open #header
+    height: 228px
+
+  #header
+    background-color: #f6f6f6
+    height: 68px
+
+    /* border */
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+
+    /* shadow */
+    -webkit-box-shadow: 0px 2px 30px rgba(50, 50, 50, 0.1)
+    -moz-box-shadow:    0px 2px 30px rgba(50, 50, 50, 0.1)
+    box-shadow:         0px 2px 30px rgba(50, 50, 50, 0.1)
+
+    border: 1px solid #4dbdef
+    margin-left: 10px !important
+    position: fixed
+    top: -10px
+    width: 1024px !important
+
+    .nav-primary
+      margin: 30px 50px 0 43px
+
+    #learnmore
+      margin: 14px 5px
+
+    #logo.sprite
+      background-position: -3px -564px
+      margin: 15px 0 0 10px
+      height: 46px
+      width: 112px
+
+  #main
+    top: 55px
+
+  #footer
+    top: 70px
+
+.cufon-loading nav li 
+  visibility: hidden !important
+
+/* Content
+ *************************************************************/
+#view-content
+  min-height: 300px
+  padding: 0 20px
+
+#main
+  background-color: #fff
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  display: block
+  min-height: 400px
+  position: relative
+  top: -31px
+  width: 100%
+  z-index: 10px
+
+  p
+    font-size: 16px
+    margin: 0 auto 25px auto
+    width: 85%
+
+  .page-title
+    margin: 24px auto 20px auto
+    width: 86%
+
+  .get-a-quote
+    clear: both
+    float: right
+    margin: 0 22px 22px 0
+
+/* Buttons
+ *************************************************************/
+button 
+  background-color: #ed217c
+  color: #fff
+  font-size: 14px
+  text-transform: uppercase
+
+  &:hover, input[type="submit"]:hover, #button-submit:hover
+    color: #000 !important
+
+
+
+/* Footer 
+ *************************************************************/
+#footer
+  display: block
+  position: relative
+  top: -15px
+
+#blog-entries,#facebook-module,#email-signup 
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  background-color: #fff
+  min-height: 270px
+
+#blog-entries
+  ul
+    margin-bottom: 15px
+
+  hgroup
+    padding: 10px 15px 0
+
+  h1
+    color: #ed217c
+    font-size: 24px
+    font-weight: bold
+    line-height: 24px
+    margin: 0 0 -8px 0
+
+  h2 
+    font-size: 24px
+    line-height: 24px
+    margin: 0
+    
+  li
+    background: url(../img/arrow.png) no-repeat center right
+    border-bottom: 1px dashed #d4d4d4
+    font-size: 18px
+    margin: 0 15px
+    padding: 8px 0
+
+    a
+      &:hover
+        color: #ed217c
+
+      span
+        float: right
+        width: 9px
+        height: 9px
+
+#facebook-module 
+  div
+    margin: 5px
+
+@mixin email-label
+  float: left
+  font-size: 14px
+  font-weight: normal
+
+@mixin email-input
+  float: right
+  margin-bottom: 0
+  padding: 3px
+
+#email-signup 
+  background: #fff url(../img/newsletter-background.jpg) no-repeat top left
+
+  form
+    padding: 0 25px 0 18px
+
+  input[type="text"]
+    background-color: #e3e3e3
+    width: 200px
+
+  #email-set
+    margin-top: 105px
+    margin-bottom: 5px
+
+    label
+      @include email-label
+
+    input 
+      @include email-input
+
+    #name-set
+      margin-bottom: 5px
+
+      label
+        @include email-label
+
+      input
+        @include email-input
+
+  #gender-set
+    margin-bottom: 0
+
+    label
+      float: left
+      font-size: 14px
+      font-weight: normal
+      margin-right: 26px
+
+    label[for="female-radio"]
+      clear: both
+
+    span 
+      font-size: 12px
+
+#email-signup 
+  button 
+    float: right
+
+.radio-container
+  float: left
+
+.one-third.column
+  width: 328px !important
+
+input[type="radio"]
+  background: url(../img/sprite.png) no-repeat -12px -342px
+  height: 14px
+  outline: 0
+  width: 14px
+
+#copyright
+  font-size: 12px
+  font-style: italic
+  padding: 10px
+
+#detail
+  border-bottom: 1px dashed #d4d4d4
+  color: #666
+  font-size: 12px
+  padding: 10px
+
+  strong
+    color: #666
+
+#footer-logo
+  background: url('../img/sprite.png') no-repeat -1px -438px
+  margin-top: 10px
+  width: 105px
+  height: 108px
+
+.nav-secondary
+  padding-top: 10px
+
+  li
+    margin-bottom: 0
+
+    a 
+      color: #666
+      font-size: 12px
+      margin: 0
+      padding: 0
+      text-decoration: none
+      text-transform: uppercase
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir
+  display: block 
+  border: 0
+  text-indent: -999em
+  overflow: hidden
+  background-color: transparent
+  background-repeat: no-repeat
+  text-align: left
+  direction: ltr
+
+  br 
+    display: none
+
+.hidden 
+  display: none !important 
+  visibility: hidden
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+  &.focusable:active, &.focusable:focus 
+    clip: auto
+    height: auto
+    margin: 0
+    overflow: visible 
+    position: static
+    width: auto
+
+.invisible
+  visibility: hidden
+
+.clearfix
+  zoom: 1
+
+  &:before, &:after
+    content: ""
+    display: table
+
+  &:after 
+    clear: both
+
+/* ==|== print styles ======================================================= */
+@media print
+  *
+    background: transparent !important
+    color: black !important
+    text-shadow: none !important
+    filter: none !important
+    -ms-filter: none !important
+
+  a, a:visited
+    text-decoration: underline
+
+  a[href]:after 
+    content: " (" attr(href) ")"
+
+  abbr[title]:after
+    content: " (" attr(title) ")"
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after
+    content: ""
+
+  pre, blockquote
+    border: 1px solid #999
+    page-break-inside: avoid
+
+  thead
+    display: table-header-group
+
+  tr, img
+    page-break-inside: avoid
+
+  img
+    max-width: 100% !important
+
+  @page 
+    margin: 0.5cm
+
+  p, h2, h3 
+    orphans: 3
+    widows: 3
+  h2, h3
+    page-break-after: avoid
+
+
+/* Work
+ *************************************************************/
+.work 
+  #view-content
+    padding-right: 0
+
+#work-nav
+  display: none
+  list-style-type: none
+  position: absolute
+  left: 190px
+  top: 27px
+
+  li
+    border-left: 1px solid #333
+    display: inline
+    float: left
+    padding: 0 12px
+
+    &:first-child
+      border-left: none
+
+  a:hover
+    color: #ed217c 
+
+  .active 
+    color: #ed217c
+    text-decoration: underline
+
+.work 
+  .thumbs
+    clear: both
+
+    a
+      color: #fff
+      display: block
+      font-size: 24px
+      line-height: 28px
+      padding: 0 50px
+      position: relative
+      top: 100px
+      text-align: center
+      text-decoration: none
+
+    li
+      background-color: #000
+      float: left
+      height: 235px
+      width: 317px 
+      margin-right: 14px
+      margin-bottom: 14px
+
+      &:hover
+        border: 1px solid #ed217c
+        cursor: pointer
+
+        a
+          color: #ed217c
+          margin-top: -1px
+
+
+#work-overlay
+  background: rgba(255, 255, 255, 0.9)
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 99
+
+  #pic-main
+    float: left
+
+  h2
+    float: left
+
+  #close
+    cursor: pointer

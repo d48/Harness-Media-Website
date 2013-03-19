@@ -1,10 +1,10 @@
 build/*
 tests/*
 docs/*
-tests-backup/*
 .zfproject.xml
 bin/*
 data/*
 .DS_Store
 node_modules/*
 tests-backup
+*.bak

@@ -1,4 +1,5 @@
 $ = jQuery
+console = window.console
 
 # Creates homepage slideshow
 
@@ -15,6 +16,7 @@ init = (@config) ->
 # Work page thumbnails to display info
 workExpand = (e) ->
   e.preventDefault()
+  console.log 'this is ev', e
 
   # get template
   overlay = $('#template-work-overlay').html()
