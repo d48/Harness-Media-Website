@@ -439,10 +439,11 @@ input[type="radio"] {
     margin-bottom: 14px; }
     .work .thumbs li:hover {
       border: 1px solid #ed217c;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-right: 12px;
+      margin-bottom: 12px; }
       .work .thumbs li:hover a {
-        color: #ed217c;
-        margin-top: -1px; }
+        color: #ed217c; }
 
 #work-overlay {
   background: rgba(255, 255, 255, 0.9);
