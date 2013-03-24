@@ -18,26 +18,36 @@
 <script type="text/template" id="template-work-overlay">
 <div id="work-overlay">
     <div id="bg">
-        <span id="close">X</span>
+        <div id="work-content">
+            <nav role="work" id="nav-work">
+                <ul>
+                    <li><a href="#"><img src="/img/arrow-left.png" alt="Prev" /> Prev</a></li>
+                    <li>|</li>
+                    <li><a href="#">Next <img src="/img/arrow-right.png" alt="" /></a></li>
+                    <li><a href="#" id="close">X</a></li>
+                </ul>
+            </nav>
+           
+            <img id="pic-main" src="img/work-fpo.png" alt="fpo" />
 
-        <img id="pic-main" src="img/work-fpo.png" alt="fpo" />
+            <h2>{{=it.title}}</h2>
 
-        <h2>{{=it.title}}</h2>
+            <ul id="project-thumbs">
+                {{~it.pictures :value:index}}
+                <li><img src="{{=value}}" /></li>
+                {{~}}
+            </ul>
 
-        <ul id="project-thumbs">
-            {{~it.pictures :value:index}}
-            <li><img src="{{=value}}" /></li>
-            {{~}}
-        </ul>
+            <p id="description">{{=it.description}}</p>
 
-        <p>{{=it.description}}</p>
+            <p><strong>Tech:</strong></p>
+            <ul id="services">
+                {{~it.services :value:index}}
+                <li>{{=value}}</li>
+                {{~}}
+            </ul>
 
-        <p><strong>Tech:</strong></p>
-        <ul id="services">
-            {{~it.services :value:index}}
-            <li>{{=value}}</li>
-            {{~}}
-        </ul>
+        </div>
     </div>
 </div>
 </script>

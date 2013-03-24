@@ -1,8 +1,11 @@
+@import "_variables"
+@import "_mixins"
+
 // Primary styles
-/* *  */
-/*   -moz-box-sizing: border-box */
-/*   -webkit-box-sizing: border-box */
-/*   box-sizing: border-box */
+* 
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
 
 body 
   background: url(../img/hmg_bkd.jpg) top center #fff fixed 
@@ -97,7 +100,7 @@ header
 
   li, #nav-menu-button 
     display: inline
-    font-family: Arial, Helvetica
+    font-family: $fontFamilyPrimary 
     font-size: 19px
     font-weight: bold
     margin: 0 30px 0 0
@@ -245,7 +248,7 @@ button
     margin: 0
     
   li
-    background: url(../img/arrow.png) no-repeat center right
+    background: url(../img/arrow-right.png) no-repeat center right
     border-bottom: 1px dashed #d4d4d4
     font-size: 18px
     margin: 0 15px
@@ -517,11 +520,14 @@ input[type="radio"]
       &:hover
         border: 1px solid #ed217c
         cursor: pointer
-        margin-right: 12px
-        margin-bottom: 12px
 
         a
           color: #ed217c
+          margin-top: -1px
+
+
+#template-work-overlay 
+  display: none
 
 #work-overlay
   background: rgba(255, 255, 255, 0.9)
@@ -532,11 +538,70 @@ input[type="radio"]
   width: 100%
   z-index: 99
 
+  #bg
+    background-color: $workOverlayBackground
+    border-bottom: 1px solid $highlightSecondary
+    border-top: 1px solid $highlightSecondary
+    margin-top: 100px
+    min-height: 650px
+    @include box-shadow(1px 1px 25px 1px, #ccc, 0.5)
+
+  #work-content
+    margin: 0 auto
+    width: 1110px
+
+    #description
+      font-size: $fontSizeMedium
+
+    #nav-work
+      display: inline-block
+      text-transform: uppercase
+      width: 100%
+
+      ul
+        border: 1px solid $highlightSecondary
+        border-top: none
+        @include border-radius(4px)
+        float: right
+        margin-bottom: 0
+        padding: 10px
+        width: 180px
+
+        li 
+          float: left
+          margin-right: 10px
+          margin-bottom: 0
+
+          a 
+            text-transform: uppercase
+            text-decoration: none
+
+
+    #services 
+      li 
+        margin-bottom: 0
+
+    h2
+      font-family: $fontFamilyPrimary
+      margin-top: 30px
+
+    p 
+      line-height: 1.25em
+
+    
   #pic-main
     float: left
-
-  h2
-    float: left
+    margin: 0 30px 0 0
 
   #close
     cursor: pointer
+
+  #project-thumbs
+    display: inline-block
+    width: 300px
+
+    li 
+      float: left
+      margin-bottom: 2px
+      margin-right: 5px
+

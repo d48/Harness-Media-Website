@@ -15,7 +15,6 @@
   workExpand = function(e) {
     var d, data, h, html, key, overlay, tempFn;
     e.preventDefault();
-    console.log('this is ev', e);
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
     key = $(this).find('a').data('key');

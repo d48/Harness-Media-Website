@@ -16,7 +16,6 @@ init = (@config) ->
 # Work page thumbnails to display info
 workExpand = (e) ->
   e.preventDefault()
-  console.log 'this is ev', e
 
   # get template
   overlay = $('#template-work-overlay').html()
@@ -27,14 +26,12 @@ workExpand = (e) ->
 
 
   # open overlay
-  # @todo make into handlebar or doT.js pre-compiled template so can pass data to
   d = document.body
   h = $(d).innerHeight()
   $(d).append(html)
 
   # set height form viewport
   $('#work-overlay').css('height', h)
-
 
 # close portfolio work detail
 workClose = (e) ->
