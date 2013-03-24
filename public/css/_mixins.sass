@@ -1,0 +1,15 @@
+// Mixins
+
+@mixin box-shadow($pos, $color, $opacity) 
+  -webkit-box-shadow: $pos rgba($color, $opacity)
+  -moz-box-shadow: $pos rgba($color, $opacity)
+  -o-box-shadow: $pos rgba($color, $opacity)
+  box-shadow: $pos rgba($color, $opacity)
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+  
+
