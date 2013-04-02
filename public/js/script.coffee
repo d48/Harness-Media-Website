@@ -11,43 +11,49 @@ init = (@config) ->
   # click handlers
   $('.work').on 'click', '.thumbs li', workExpand
   $('.work').on 'click', '#close', workClose
-  $('.work').on 'click', '#prev', workPrev
-  $('.work').on 'click', '#next', workNext
+  $('.work').on 'click', '#prev', workMenuClick
+  $('.work').on 'click', '#next', workMenuClick
 
 
-# opens previous work detail
-workPrev = (e) ->
+# opens info for the work item
+workMenuClick = (e) ->
   e.preventDefault()
-  console.log 'prev'
+  len = HMG.data.length
+  workKey = $(this).data('workkey')
+  
+  # check if key is within bounds
+  if workKey < len and workKey > 0 
+    workExpand e, workKey
 
-
-# opens next work detail
-workNext = (e) ->
-  e.preventDefault()
-  console.log 'next'
 
 
 # Work page thumbnails to display info
 # @todo move work fn into a seperate file
-workExpand = (e) ->
+workExpand = (e, showKey) ->
   e.preventDefault()
 
   # get template
   overlay = $('#template-work-overlay').html()
   tempFn = doT.template(overlay)
-  key = $(this).find('a').data('key')
+  key = if showKey then showKey else  $(this).find('a').data('key')
   data = HMG.data
+  data[key].newKey = key
   html = tempFn(data[key])
 
 
   # open overlay
-  d = document.body
-  h = $(d).innerHeight()
-  $(d).append(html)
+  popup = $('#work-overlay')
+  isOpen = popup.is(':visible')
+  if isOpen 
+      popup.replaceWith(html) 
+  else 
+    d = document.body
+    h = $(d).innerHeight()
+    $(d).append(html)
+    # set height form viewport
+    $('#work-overlay').css('height', h)
 
-  # set height form viewport
-  $('#work-overlay').css('height', h)
-
+ 
 # close portfolio work detail
 workClose = (e) ->
   e.preventDefault()

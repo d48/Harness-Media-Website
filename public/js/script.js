@@ -1,5 +1,5 @@
 (function() {
-  var $, clickSlide, console, init, nextSlide, showSelected, slideShow, workClose, workExpand, workNext, workPrev;
+  var $, clickSlide, console, init, nextSlide, showSelected, slideShow, workClose, workExpand, workMenuClick;
 
   $ = jQuery;
 
@@ -10,32 +10,39 @@
     slideShow(this.config);
     $('.work').on('click', '.thumbs li', workExpand);
     $('.work').on('click', '#close', workClose);
-    $('.work').on('click', '#prev', workPrev);
-    return $('.work').on('click', '#next', workNext);
+    $('.work').on('click', '#prev', workMenuClick);
+    return $('.work').on('click', '#next', workMenuClick);
   };
 
-  workPrev = function(e) {
+  workMenuClick = function(e) {
+    var len, workKey;
     e.preventDefault();
-    return console.log('prev');
+    len = HMG.data.length;
+    workKey = $(this).data('workkey');
+    if (workKey < len && workKey > 0) {
+      return workExpand(e, workKey);
+    }
   };
 
-  workNext = function(e) {
-    e.preventDefault();
-    return console.log('next');
-  };
-
-  workExpand = function(e) {
-    var d, data, h, html, key, overlay, tempFn;
+  workExpand = function(e, showKey) {
+    var d, data, h, html, isOpen, key, overlay, popup, tempFn;
     e.preventDefault();
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
-    key = $(this).find('a').data('key');
+    key = showKey ? showKey : $(this).find('a').data('key');
     data = HMG.data;
+    data[key].newKey = key;
     html = tempFn(data[key]);
-    d = document.body;
-    h = $(d).innerHeight();
-    $(d).append(html);
-    return $('#work-overlay').css('height', h);
+    popup = $('#work-overlay');
+    isOpen = popup.is(':visible');
+    if (isOpen) {
+      return popup.replaceWith(html);
+    } else {
+      d = document.body;
+      h = $(d).innerHeight();
+      $(d).append(html);
+      return $('#work-overlay').css('height', h);
+    }
   };
 
   workClose = function(e) {
