@@ -22,7 +22,7 @@ workMenuClick = (e) ->
   workKey = $(this).data('workkey')
   
   # check if key is within bounds
-  if workKey < len and workKey > 0 
+  if len > workKey >= 0 
     workExpand e, workKey
 
 
@@ -31,11 +31,12 @@ workMenuClick = (e) ->
 # @todo move work fn into a seperate file
 workExpand = (e, showKey) ->
   e.preventDefault()
+  console.log 'showKey', showKey
 
   # get template
   overlay = $('#template-work-overlay').html()
   tempFn = doT.template(overlay)
-  key = if showKey then showKey else  $(this).find('a').data('key')
+  key = if showKey then showKey else $(this).find('a').data('key')
   data = HMG.data
   data[key].newKey = key
   html = tempFn(data[key])

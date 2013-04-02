@@ -35,7 +35,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
     e.preventDefault();
     len = HMG.data.length;
     workKey = $(this).data('workkey');
-    if (workKey < len && workKey > 0) {
+    if ((len > workKey && workKey >= 0)) {
       return workExpand(e, workKey);
     }
   };
@@ -43,6 +43,7 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
   workExpand = function(e, showKey) {
     var d, data, h, html, isOpen, key, overlay, popup, tempFn;
     e.preventDefault();
+    console.log('showKey', showKey);
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
     key = showKey ? showKey : $(this).find('a').data('key');

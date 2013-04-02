@@ -47,6 +47,21 @@ class HMG_WorkController extends Zend_Controller_Action
             'img/work-fpo-pictures.png'
         );
 
+        $related = array(
+            'Platform - Fry E-commerce',
+            'Web Redesign',
+            'Mobile/Tablet UI/UX',
+            'Email Marketing (Consulted on Best Practices)',
+            'Analytics - SiteCatalyst (Omniture)',
+            'Search - Endeca, Lucene, Celebros',
+            'Performance - Gomez, Akamai',
+            'Personalization - Baynote, MyBuys',
+            'Email Marketing - Lyris, iContact, Benchmark, CampaignMonitor, ExactTarget...',
+            'Analytics - SiteCatalyst (Omniture), Google Analytics',
+            'Social Marketing - Gorilla',
+            'Mobile/Tablet'
+        );
+
         $services = array(
             'FRY E-commerce',
             'Endeca',
@@ -85,6 +100,14 @@ class HMG_WorkController extends Zend_Controller_Action
 
         $rachelroy = $nike;
         $rachelroy['title'] = 'RACHEL ROY'; 
+        $rachelroy['description'] = 'Designed and managed creative, development/UAT/QA processes and presented to C and VP level executives for concepts and direction of web positioning. Produced multiple micro-sites, web-redesign(s), various digital campaigns, sought to implement digital/e-commerce best practices throughout each brand within the organization.';
+        $rachelroy['related'] = array(
+            $related[0],
+            $related[1],
+            $related[2],
+            $related[3],
+            $related[4]
+        );
         
         $jones= $nike;
         $jones['title'] = 'JONES NEW YORK'; 

@@ -21,7 +21,10 @@
         <div id="work-content">
             <nav role="work" id="nav-work">
                 <ul>
-                    <li><a id="prev" href="#" data-workkey="{{=it.newKey - 1}}"><img src="/img/arrow-left.png" alt="Prev" /> Prev</a></li>
+                    <li>
+                        <a id="prev" href="#" data-workkey="{{=it.newKey + -1}}">
+                            <img src="/img/arrow-left.png" alt="Prev" /> Prev</a>
+                        </li>
                     <li data-currkey="{{=it.newKey}}">|</li>
                     <li><a id="next" href="#" data-workkey="{{=it.newKey + 1}}">Next <img src="/img/arrow-right.png" alt="" /></a></li>
                     <li><a href="#" id="close">X</a></li>
