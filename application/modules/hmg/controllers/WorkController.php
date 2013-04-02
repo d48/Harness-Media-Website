@@ -48,9 +48,8 @@ class HMG_WorkController extends Zend_Controller_Action
         );
 
         $services = array(
-            'FRY',
-            'ECommerce',
-            'Endecea',
+            'FRY E-commerce',
+            'Endeca',
             'Scene7',
             'Gomez',
             'WordPress',
@@ -62,7 +61,7 @@ class HMG_WorkController extends Zend_Controller_Action
             'description' => $description,
             'pictures' => $pictures,
             'services' => $services,
-            'title' => 'Nike/Hurley: USOPEN 2012'
+            'title' => 'NIKE US OPEN'
         );
 
         // create duplicates and update name
@@ -73,7 +72,7 @@ class HMG_WorkController extends Zend_Controller_Action
         $tlfi['title'] = 'TLFI';
 
         $killerdana = $nike;
-        $killerdana['title'] = 'KILLERDANA';
+        $killerdana['title'] = 'KILLER DANA';
 
         $contiki = $nike;
         $contiki['title'] = 'CONTIKI';
@@ -82,17 +81,24 @@ class HMG_WorkController extends Zend_Controller_Action
         $fmf['title'] = 'FMF';
 
         $skateboards = $nike;
-        $skateboards['title'] = 'Skateboards';
+        $skateboards['title'] = 'SKATEBOARDS';
 
+        $rachelroy = $nike;
+        $rachelroy['title'] = 'RACHEL ROY'; 
+        
+        $jones= $nike;
+        $jones['title'] = 'JONES NEW YORK'; 
 
         $this->view->data = array(
+            $rachelroy,
+            $jones,
             $nike,
-            $oneill,
-            $tlfi,
             $killerdana,
-            $contiki,
             $fmf,
-            $skateboards
+            $contiki,
+            $oneill,
+            $skateboards,
+            $tlfi
         );
 
 

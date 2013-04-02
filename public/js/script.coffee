@@ -42,16 +42,20 @@ workExpand = (e, showKey) ->
 
 
   # open overlay
+  d = document.body
+  h = $(d).innerHeight()
   popup = $('#work-overlay')
   isOpen = popup.is(':visible')
   if isOpen 
       popup.replaceWith(html) 
   else 
-    d = document.body
-    h = $(d).innerHeight()
-    $(d).append(html)
-    # set height form viewport
-    $('#work-overlay').css('height', h)
+     $(d).append(html)
+    
+  # set height form viewport
+  $('#work-overlay').css('height', h)
+
+  # move to top
+  $("html, body").animate({ scrollTop: $('#work-content').offset().top }, "fast");
 
  
 # close portfolio work detail

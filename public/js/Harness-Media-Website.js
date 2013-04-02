@@ -49,16 +49,19 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
     data = HMG.data;
     data[key].newKey = key;
     html = tempFn(data[key]);
+    d = document.body;
+    h = $(d).innerHeight();
     popup = $('#work-overlay');
     isOpen = popup.is(':visible');
     if (isOpen) {
-      return popup.replaceWith(html);
+      popup.replaceWith(html);
     } else {
-      d = document.body;
-      h = $(d).innerHeight();
       $(d).append(html);
-      return $('#work-overlay').css('height', h);
     }
+    $('#work-overlay').css('height', h);
+    return $("html, body").animate({
+      scrollTop: $('#work-content').offset().top
+    }, "fast");
   };
 
   workClose = function(e) {
