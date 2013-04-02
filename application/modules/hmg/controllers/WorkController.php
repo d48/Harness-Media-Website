@@ -65,6 +65,7 @@ class HMG_WorkController extends Zend_Controller_Action
             'title' => 'Nike/Hurley: USOPEN 2012'
         );
 
+        // create duplicates and update name
         $oneill = $nike;
         $oneill['title'] = 'ONEILL';
 
@@ -85,14 +86,16 @@ class HMG_WorkController extends Zend_Controller_Action
 
 
         $this->view->data = array(
-            'nike' => $nike,
-            'oneill' => $oneill,
-            'tlfi' => $tlfi,
-            'killerdana' => $killerdana,
-            'contiki' => $contiki,
-            'fmf' => $fmf,
-            'skateboards' => $skateboards,
+            $nike,
+            $oneill,
+            $tlfi,
+            $killerdana,
+            $contiki,
+            $fmf,
+            $skateboards
         );
+
+
 
         $this->view->thumbnailHTML = $this->buildThumbnails($this->view->data);
     }

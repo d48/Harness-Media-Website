@@ -11,9 +11,24 @@ init = (@config) ->
   # click handlers
   $('.work').on 'click', '.thumbs li', workExpand
   $('.work').on 'click', '#close', workClose
+  $('.work').on 'click', '#prev', workPrev
+  $('.work').on 'click', '#next', workNext
+
+
+# opens previous work detail
+workPrev = (e) ->
+  e.preventDefault()
+  console.log 'prev'
+
+
+# opens next work detail
+workNext = (e) ->
+  e.preventDefault()
+  console.log 'next'
 
 
 # Work page thumbnails to display info
+# @todo move work fn into a seperate file
 workExpand = (e) ->
   e.preventDefault()
 

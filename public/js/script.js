@@ -1,5 +1,5 @@
 (function() {
-  var $, clickSlide, console, init, nextSlide, showSelected, slideShow, workClose, workExpand;
+  var $, clickSlide, console, init, nextSlide, showSelected, slideShow, workClose, workExpand, workNext, workPrev;
 
   $ = jQuery;
 
@@ -9,7 +9,19 @@
     this.config = config;
     slideShow(this.config);
     $('.work').on('click', '.thumbs li', workExpand);
-    return $('.work').on('click', '#close', workClose);
+    $('.work').on('click', '#close', workClose);
+    $('.work').on('click', '#prev', workPrev);
+    return $('.work').on('click', '#next', workNext);
+  };
+
+  workPrev = function(e) {
+    e.preventDefault();
+    return console.log('prev');
+  };
+
+  workNext = function(e) {
+    e.preventDefault();
+    return console.log('next');
   };
 
   workExpand = function(e) {
