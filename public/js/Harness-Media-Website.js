@@ -43,10 +43,9 @@ window.log=function(){log.history=log.history||[];log.history.push(arguments);if
   workExpand = function(e, showKey) {
     var d, data, h, html, isOpen, key, overlay, popup, tempFn;
     e.preventDefault();
-    console.log('showKey', showKey);
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
-    key = showKey ? showKey : $(this).find('a').data('key');
+    key = showKey != null ? showKey : $(this).find('a').data('key');
     data = HMG.data;
     data[key].newKey = key;
     html = tempFn(data[key]);
