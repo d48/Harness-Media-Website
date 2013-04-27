@@ -470,7 +470,8 @@ input[type="radio"] {
     margin: 0 auto;
     width: 1110px; }
     #work-overlay #work-content #description {
-      font-size: 18px; }
+      font-size: 18px;
+      margin: 0 0 20px 0; }
     #work-overlay #work-content #nav-work {
       display: inline-block;
       text-transform: uppercase;
@@ -491,6 +492,8 @@ input[type="radio"] {
           margin-right: 10px;
           margin-bottom: 0; }
           #work-overlay #work-content #nav-work ul li a {
+            color: #ed217c;
+            font-size: 12px;
             text-transform: uppercase;
             text-decoration: none; }
     #work-overlay #work-content #services li {
@@ -499,7 +502,8 @@ input[type="radio"] {
       font-family: Arial, Helvetica;
       margin-top: 30px; }
     #work-overlay #work-content p {
-      line-height: 1.25em; }
+      line-height: 1.25em;
+      margin: 0 0 10px 0; }
   #work-overlay #pic-main {
     float: left;
     margin: 0 30px 0 0; }

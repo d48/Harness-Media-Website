@@ -23,9 +23,9 @@ module.exports = function(grunt) {
             'public/js/libs/jquery-1.8.0.min.js'
           , 'public/js/libs/doT.min.js'
           , 'public/js/plugins.js'
-          , 'public/js/script.js'
           , 'public/js/libs/cufon-yui.js'
           , 'public/js/libs/Avenir_400-Avenir_900.font.js'
+          , 'public/js/script.js'
         ]
         , dest: 'public/js/<%= pkg.name %>.js'
       }

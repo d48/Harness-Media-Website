@@ -43,9 +43,10 @@
       $(d).append(html);
     }
     $('#work-overlay').css('height', h);
-    return $("html, body").animate({
+    $("html, body").animate({
       scrollTop: $('#work-content').offset().top
     }, "fast");
+    return window.Cufon.refresh();
   };
 
   workClose = function(e) {

@@ -101,7 +101,7 @@ class HMG_WorkController extends Zend_Controller_Action
         $rachelroy = $nike;
         $rachelroy['title'] = 'RACHEL ROY'; 
         $rachelroy['description'] = 'Designed and managed creative, development/UAT/QA processes and presented to C and VP level executives for concepts and direction of web positioning. Produced multiple micro-sites, web-redesign(s), various digital campaigns, sought to implement digital/e-commerce best practices throughout each brand within the organization.';
-        $rachelroy['related'] = array(
+        $rachelroy['services'] = array(
             $related[0],
             $related[1],
             $related[2],
@@ -111,7 +111,13 @@ class HMG_WorkController extends Zend_Controller_Action
         
         $jones= $nike;
         $jones['title'] = 'JONES NEW YORK'; 
-
+        $jones['description'] = 'Provided Art Direction and Design to Jones New York for the launch of their microsite premiering their newest denim line for Fall2012 as well as their web presence for the launch of their Fall 2012 national ad campaign - Keeping up with the Jonses’.';
+        $jones['services'] = array(
+            $related[1],
+            $related[3],
+            $related[4]
+        );
+        
         $this->view->data = array(
             $rachelroy,
             $jones,
@@ -123,8 +129,6 @@ class HMG_WorkController extends Zend_Controller_Action
             $skateboards,
             $tlfi
         );
-
-
 
         $this->view->thumbnailHTML = $this->buildThumbnails($this->view->data);
     }

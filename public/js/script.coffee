@@ -15,7 +15,7 @@ init = (@config) ->
   $('.work').on 'click', '#next', workMenuClick
 
 
-# opens info for the work item
+# opens info for the next or previous work item
 workMenuClick = (e) ->
   e.preventDefault()
   len = HMG.data.length
@@ -56,6 +56,9 @@ workExpand = (e, showKey) ->
 
   # move to top
   $("html, body").animate({ scrollTop: $('#work-content').offset().top }, "fast");
+
+  # make sure font is updated for nav
+  window.Cufon.refresh()
 
  
 # close portfolio work detail
