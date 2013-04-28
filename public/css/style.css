@@ -476,26 +476,36 @@ input[type="radio"] {
       display: inline-block;
       text-transform: uppercase;
       width: 100%; }
+      #work-overlay #work-content #nav-work #divider {
+        color: #ed217c;
+        font-size: 10px;
+        margin-top: 6px; }
+      #work-overlay #work-content #nav-work #close-work {
+        border-left: 1px solid #57b7f6; }
       #work-overlay #work-content #nav-work ul {
         border: 1px solid #57b7f6;
         border-top: none;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -o-border-radius: 4px;
-        border-radius: 4px;
+        -webkit-border-radius: 0 0 4px 4px;
+        -moz-border-radius: 0 0 4px 4px;
+        -o-border-radius: 0 0 4px 4px;
+        border-radius: 0 0 4px 4px;
         float: right;
-        margin-bottom: 0;
-        padding: 10px;
-        width: 180px; }
+        margin: 0;
+        padding: 0; }
         #work-overlay #work-content #nav-work ul li {
           float: left;
-          margin-right: 10px;
-          margin-bottom: 0; }
+          margin: 0; }
+          #work-overlay #work-content #nav-work ul li #prev {
+            padding-left: 7px; }
           #work-overlay #work-content #nav-work ul li a {
             color: #ed217c;
+            display: block;
             font-size: 12px;
+            padding: 7px 13px;
             text-transform: uppercase;
             text-decoration: none; }
+            #work-overlay #work-content #nav-work ul li a .arrow {
+              margin: 0 2px -1px 2px; }
     #work-overlay #work-content #services li {
       margin-bottom: 0; }
     #work-overlay #work-content h2 {
@@ -508,7 +518,8 @@ input[type="radio"] {
     float: left;
     margin: 0 30px 0 0; }
   #work-overlay #close {
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 18px !important; }
   #work-overlay #project-thumbs {
     display: inline-block;
     width: 300px; }

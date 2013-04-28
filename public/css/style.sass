@@ -488,10 +488,10 @@ input[type="radio"]
       border-left: none
 
   a:hover
-    color: #ed217c 
+    color: $highlightPrimary
 
   .active 
-    color: #ed217c
+    color: $highlightPrimary
     text-decoration: underline
 
 .work 
@@ -559,25 +559,39 @@ input[type="radio"]
       text-transform: uppercase
       width: 100%
 
+      #divider
+        color: $highlightPrimary
+        font-size: $fontSizeTiny
+        margin-top: 6px
+
+      #close-work
+        border-left: 1px solid $highlightSecondary
+
       ul
         border: 1px solid $highlightSecondary
         border-top: none
-        @include border-radius(4px)
+        @include border-radius(0 0 4px 4px)
         float: right
-        margin-bottom: 0
-        padding: 10px
-        width: 180px
+        margin: 0
+        padding: 0
 
         li 
           float: left
-          margin-right: 10px
-          margin-bottom: 0
+          margin: 0
+
+          #prev
+            padding-left: 7px
 
           a 
             color: $highlightPrimary
+            display: block
             font-size: $fontSizeMini
+            padding: 7px 13px
             text-transform: uppercase
             text-decoration: none
+
+            .arrow 
+              margin: 0 2px -1px 2px
 
 
     #services 
@@ -599,6 +613,7 @@ input[type="radio"]
 
   #close
     cursor: pointer
+    font-size: $fontSizeMedium !important
 
   #project-thumbs
     display: inline-block
