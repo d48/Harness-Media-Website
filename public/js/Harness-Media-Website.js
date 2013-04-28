@@ -84,7 +84,7 @@ Cufon.registerFont({"w":213,"face":{"font-family":"Avenir","font-weight":900,"fo
   };
 
   workExpand = function(e, showKey) {
-    var d, data, h, html, isOpen, key, overlay, popup, tempFn;
+    var d, data, h, html, isOpen, key, overlay, popup, tempFn, w;
     e.preventDefault();
     overlay = $('#template-work-overlay').html();
     tempFn = doT.template(overlay);
@@ -92,16 +92,18 @@ Cufon.registerFont({"w":213,"face":{"font-family":"Avenir","font-weight":900,"fo
     data = HMG.data;
     data[key].newKey = key;
     html = tempFn(data[key]);
-    d = document.body;
-    h = $(d).innerHeight();
+    d = document;
     popup = $('#work-overlay');
     isOpen = popup.is(':visible');
     if (isOpen) {
       popup.replaceWith(html);
     } else {
-      $(d).append(html);
+      $(d.body).append(html);
     }
+    h = d.height;
+    w = d.width;
     $('#work-overlay').css('height', h);
+    $('#work-overlay').css('width', w);
     $("html, body").animate({
       scrollTop: $('#work-content').offset().top
     }, "fast");

@@ -42,17 +42,19 @@ workExpand = (e, showKey) ->
 
 
   # open overlay
-  d = document.body
-  h = $(d).innerHeight()
+  d = document
   popup = $('#work-overlay')
   isOpen = popup.is(':visible')
   if isOpen 
       popup.replaceWith(html) 
   else 
-     $(d).append(html)
+     $(d.body).append(html)
     
-  # set height form viewport
+  # set width/height form viewport
+  h = d.height
+  w = d.width
   $('#work-overlay').css('height', h)
+  $('#work-overlay').css('width', w)
 
   # move to top
   $("html, body").animate({ scrollTop: $('#work-content').offset().top }, "fast");
