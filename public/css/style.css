@@ -470,6 +470,9 @@ input[type="radio"] {
   #work-overlay #work-content {
     margin: 0 auto;
     width: 1110px; }
+    #work-overlay #work-content #details {
+      display: inline-block;
+      width: 320px; }
     #work-overlay #work-content #description {
       font-size: 18px;
       margin: 0 0 20px 0; }
@@ -507,7 +510,7 @@ input[type="radio"] {
             text-decoration: none; }
             #work-overlay #work-content #nav-work ul li a .arrow {
               margin: 0 2px -1px 2px; }
-    #work-overlay #work-content #services li {
+    #work-overlay #work-content #services li, #work-overlay #work-content #tech li {
       margin-bottom: 0; }
     #work-overlay #work-content h2 {
       font-family: Arial, Helvetica;

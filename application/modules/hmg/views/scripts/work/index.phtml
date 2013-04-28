@@ -37,20 +37,29 @@
 
             <h2>{{=it.title}}</h2>
 
-            <ul id="project-thumbs">
-                {{~it.pictures :value:index}}
-                <li><img src="{{=value}}" /></li>
-                {{~}}
-            </ul>
+            <div id="details">
+                <ul id="project-thumbs">
+                    {{~it.pictures :value:index}}
+                    <li><img src="{{=value}}" /></li>
+                    {{~}}
+                </ul>
 
-            <p id="description">{{=it.description}}</p>
+                <p id="description">{{=it.description}}</p>
 
-            <p><strong>Related:</strong></p>
-            <ul id="services">
-                {{~it.services :value:index}}
-                <li>{{=value}}</li>
-                {{~}}
-            </ul>
+                <p><strong>Related:</strong></p>
+                <ul id="services">
+                    {{~it.services :value:index}}
+                    <li>{{=value}}</li>
+                    {{~}}
+                </ul>
+
+                <p><strong>Tech:</strong></p>
+                <ul id="tech">
+                    {{~it.tech :value:index}}
+                    <li>{{=value}}</li>
+                    {{~}}
+                </ul>
+            </div>
 
         </div>
     </div>
