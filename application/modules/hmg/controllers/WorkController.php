@@ -20,7 +20,7 @@ class HMG_WorkController extends Zend_Controller_Action
         $output = '';
 
         foreach($wData as $key => $value) {
-            $output .= '<li><a href="#" data-key="' . $key . '">' . $value["title"] . '</a></li>';
+            $output .= '<li><a href="#" data-key="' . $key . '"><img src="img/work/' . $value["thumb"] . '" /></a></li>';
         }
 
         return $output;
@@ -51,7 +51,7 @@ class HMG_WorkController extends Zend_Controller_Action
             'Platform - Fry E-commerce',
             'Web Redesign',
             'Mobile/Tablet UI/UX',
-            'Email Marketing (Consulted on Best Practices)',
+            'Email Marketing',
             'Analytics - SiteCatalyst (Omniture)',
             'Search - Endeca, Lucene, Celebros',
             'Performance - Gomez, Akamai',
@@ -59,7 +59,10 @@ class HMG_WorkController extends Zend_Controller_Action
             'Email Marketing - Lyris, iContact, Benchmark, CampaignMonitor, ExactTarget...',
             'Analytics - SiteCatalyst (Omniture), Google Analytics',
             'Social Marketing - Gorilla',
-            'Mobile/Tablet'
+            'Mobile/Tablet',
+            'Web UI/UX',
+            'Mobile/iPad App',
+            'Customized Social Experience'
         );
 
         $services = array(
@@ -73,15 +76,30 @@ class HMG_WorkController extends Zend_Controller_Action
         );
         
         $nike = array(
-            'description' => $description,
+            'description' => 'Provided Art direction and user experience (UI/UX) design for 2012 US OPEN of SURF. Deliverables included mobile app, web, customized social experience and targeted digital presence with key media outlets. Mobile event app drove an unexpected increase in numbers for crowd engagement sponsored by Hurley International.',
             'pictures' => $pictures,
-            'services' => $services,
-            'title' => 'NIKE US OPEN'
+            'services' => array(
+                    $related[12],
+                    $related[13],
+                    $related[3],
+                    $related[14]
+                ), 
+            'title' => 'NIKE US OPEN',
+            'thumb' => 'hmg_tn_8020.jpg'
         );
 
         // create duplicates and update name
         $oneill = $nike;
         $oneill['title'] = 'ONEILL';
+        $oneill['description'] = 'Provided creative direction for e-commerce, digital and ongoing marketing support to reach and grow overall user base. Drove primary engagement through email marketing and social channels. As the online business grew I collaborated with teams to develop in-store retail marketing strategy and launched community marketing programs for each storefront and outlet locations.';
+        $oneill['thumb'] = 'hmg_tn_oneill.jpg';
+        $oneill['services'] = array(
+            $related[12],
+            $related[13],
+            $related[3],
+            $related[14]
+        );
+
 
         $tlfi = $nike;
         $tlfi['title'] = 'TLFI';
@@ -108,6 +126,7 @@ class HMG_WorkController extends Zend_Controller_Action
             $related[3],
             $related[4]
         );
+        $rachelroy['thumb'] = 'hmg_tn_8020.jpg';
         
         $jones= $nike;
         $jones['title'] = 'JONES NEW YORK'; 
@@ -117,6 +136,7 @@ class HMG_WorkController extends Zend_Controller_Action
             $related[3],
             $related[4]
         );
+        $jones['thumb'] = 'hmg_tn_8020.jpg';
         
         $this->view->data = array(
             $rachelroy,

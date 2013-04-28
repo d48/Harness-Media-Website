@@ -503,14 +503,11 @@ input[type="radio"]
       display: block
       font-size: 24px
       line-height: 28px
-      padding: 0 50px
       position: relative
-      top: 100px
       text-align: center
       text-decoration: none
 
     li
-      background-color: #000
       float: left
       height: 235px
       width: 317px 
@@ -518,6 +515,7 @@ input[type="radio"]
       margin-bottom: 14px
 
       &:hover
+        @include border-radius(5px)
         border: 1px solid #ed217c
         cursor: pointer
 

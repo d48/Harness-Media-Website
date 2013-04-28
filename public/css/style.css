@@ -426,19 +426,20 @@ input[type="radio"] {
     display: block;
     font-size: 24px;
     line-height: 28px;
-    padding: 0 50px;
     position: relative;
-    top: 100px;
     text-align: center;
     text-decoration: none; }
   .work .thumbs li {
-    background-color: black;
     float: left;
     height: 235px;
     width: 317px;
     margin-right: 14px;
     margin-bottom: 14px; }
     .work .thumbs li:hover {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
       border: 1px solid #ed217c;
       cursor: pointer; }
       .work .thumbs li:hover a {
