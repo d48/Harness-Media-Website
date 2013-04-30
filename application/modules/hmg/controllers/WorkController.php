@@ -178,7 +178,7 @@ class HMG_WorkController extends Zend_Controller_Action
             $related[20],
             $related[18]
         );
-        $skateboards['thumb'] = 'hmg_tn_skate.jpg';
+        $skateboards['thumb'] = 'hmg_tn_skateboards.jpg';
 
 
         
